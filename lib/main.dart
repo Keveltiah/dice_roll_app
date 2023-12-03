@@ -33,34 +33,78 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
   late VideoPlayerController _controller;
   late int tentativeCourrante;
   late int icolor;
+  late int icolorbg;
   late String couleurDe;
   
-  List<Color> AvailableColors = [
-    Colors.green,
-    Colors.red,
-    Colors.black,
-    Colors.white,
-    Colors.blue,
-    Colors.yellow
+  List<String> AvailableColors = [
+    'assets/images/bleu.jpg',
+    'assets/images/rouge.jpg',
+    'assets/images/vert.jpg',
+    'assets/images/noir.jpg',
+    'assets/images/blanc.jpg',
+    'assets/images/jaune.jpg',
+  ];
+
+  List<String> AvailableBackgrounds = [
+    'assets/images/backgroundgvert.jpg',
+    'assets/images/backgroundmarron.jpg',
+    'assets/images/backgroundblanc.jpg',
+    'assets/images/backgroundblanc2.jpg',
+    'assets/images/backgroundmarron2.jpg',
+    'assets/images/backgroundblancraille.jpg',
   ];
 
 
   late String fond;
-  List<String> winningvideoUrls = [
-    'assets/videos/Somme4_gazon_denoir.mp4',
-    'assets/videos/Somme6_gazon_denoir.mp4',
-    'assets/videos/Somme7_gazon_denoir.mp4',
-    'assets/videos/Somme3_gazon_denoir.mp4',
-    'assets/videos/Somme5_gazon_denoir.mp4'
+  List<String> winningvideoUrlsGazonDevert = [
+    'assets/videos/Somme4_gazon_devert.mp4',
+    'assets/videos/Somme6_gazon_devert.mp4',
+    'assets/videos/Somme7_gazon_devert.mp4',
+    'assets/videos/Somme3_gazon_devert.mp4',
+    'assets/videos/Somme5_gazon_devert.mp4'
   ];
 
-  List<String> loosingvideoUrls = [
-    'assets/videos/Somme2_gazon_denoir.mp4',
-    'assets/videos/Somme8_gazon_denoir.mp4',
-    'assets/videos/Somme9_gazon_denoir.mp4',
-    'assets/videos/Somme11_gazon_denoir.mp4',
-    'assets/videos/Somme10_gazon_denoir.mp4',
-    'assets/videos/Somme12_gazon_denoir.mp4'
+  List<String> loosingvideoUrlsGazonDevert = [
+    'assets/videos/Somme2_gazon_devert.mp4',
+    'assets/videos/Somme8_gazon_devert.mp4',
+    'assets/videos/Somme9_gazon_devert.mp4',
+    'assets/videos/Somme11_gazon_devert.mp4',
+    'assets/videos/Somme10_gazon_devert.mp4',
+    'assets/videos/Somme12_gazon_devert.mp4'
+  ];
+
+  List<String> winningvideoUrlsGazonDebleu = [
+    'assets/videos/Somme4_gazon_debleu.mp4',
+    'assets/videos/Somme6_gazon_debleu.mp4',
+    'assets/videos/Somme7_gazon_debleu.mp4',
+    'assets/videos/Somme3_gazon_debleu.mp4',
+    'assets/videos/Somme5_gazon_debleu.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDebleu = [
+    'assets/videos/Somme2_gazon_debleu.mp4',
+    'assets/videos/Somme8_gazon_debleu.mp4',
+    'assets/videos/Somme9_gazon_debleu.mp4',
+    'assets/videos/Somme11_gazon_debleu.mp4',
+    'assets/videos/Somme10_gazon_debleu.mp4',
+    'assets/videos/Somme12_gazon_debleu.mp4'
+  ];
+
+  List<String> winningvideoUrlsGazonDerouge = [
+    'assets/videos/Somme4_gazon_derouge.mp4',
+    'assets/videos/Somme6_gazon_derouge.mp4',
+    'assets/videos/Somme7_gazon_derouge.mp4',
+    'assets/videos/Somme3_gazon_derouge.mp4',
+    'assets/videos/Somme5_gazon_derouge.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDerouge = [
+    'assets/videos/Somme2_gazon_derouge.mp4',
+    'assets/videos/Somme8_gazon_derouge.mp4',
+    'assets/videos/Somme9_gazon_derouge.mp4',
+    'assets/videos/Somme11_gazon_derouge.mp4',
+    'assets/videos/Somme10_gazon_derouge.mp4',
+    'assets/videos/Somme12_gazon_derouge.mp4'
   ];
 
   @override
@@ -68,6 +112,7 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     super.initState();
     tentativeCourrante = 1;
     icolor = 0;
+    icolorbg = 0;
     // final prefs = await SharedPreferences.getInstance();
 
     _controller = VideoPlayerController.asset('assets/videos/init.mp4'
@@ -82,6 +127,7 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     context: context,
     builder: (BuildContext context) {
       int index = 0;
+      int indexbg = 0;
       return AlertDialog(
         content: StatefulBuilder(
             builder: (BuildContext context, StateSetter setState) {
@@ -96,70 +142,55 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                   )
                 ),
                 Padding(padding: EdgeInsets.only(left: 10)),
-                TextButton(
-                  onPressed: () => {
-                    
-                  },
-                  child: SizedBox(
-                    width: 25,
-                    height: 25,
-                    child: FloatingActionButton(
-                      child: Image.asset(
-                        'assets/images/back.jpg',
-                        width: 25,
-                      ),
-                      onPressed: (){
-                        print("back pressed");
-                        setState(() {
-                          index += 1;
-                          if (index > 5){
-                            index = 0;
-                          }
-                          print(index);
-                          icolor = index;
-                        });
-                      }
+                SizedBox(
+                  width: 25,
+                  height: 25,
+                  child: FloatingActionButton(
+                    child: Image.asset(
+                      'assets/images/back.jpg',
+                      width: 25,
                     ),
-                  )
+                    onPressed: (){
+                      print("back pressed");
+                      setState(() {
+                        index += 1;
+                        if (index > 5){
+                          index = 0;
+                        }
+                        print(index);
+                        icolor = index;
+                      });
+                    }
+                  ),
                 ),
                 SizedBox(
                   height: 20,
                   width: 20,
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: AvailableColors[index],
-                      // borderRadius: BorderRadius.all(Radius.circular(15),),
-                      // border: Border.all(
-                      //   color: Colors.white, // Set the border color here
-                      //   width: 5, // Set the border width here
-                      // ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.red.withOpacity(0.5),
-                          blurRadius: 5.0,
-                          offset: Offset(3.0, 3.0),
-                        ),
-                      ],
-                    ),
-                  ),
+                  child: Image.asset(
+                      AvailableColors[index],
+                      width: 25,
+                    )
                 ),
-                TextButton(
-                  onPressed: () => {
-                    
-                  },
-                  child: SizedBox(
-                    width: 25,
-                    height: 25,
-                    child: FloatingActionButton(
+                SizedBox(
+                  width: 25,
+                  height: 25,
+                  child: FloatingActionButton(
                     child: Image.asset(
                       'assets/images/front.jpg',
                       width: 25,
                     ),
                     onPressed: (){
-                      print("toto");
+                      print("front pressed");
+                      setState(() {
+                        index -= 1;
+                        if (index < 0){
+                          index = 5;
+                        }
+                        print(index);
+                        icolor = index;
+                      });
                     }
                   ),
-                  )
                 ),
               ],
             ),
@@ -173,9 +204,56 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                   )
                 ),
                 Padding(padding: EdgeInsets.only(left: 10)),
-                Text("1"),
-                Text("1"),
-                Text("1"),
+                SizedBox(
+                  width: 25,
+                  height: 25,
+                  child: FloatingActionButton(
+                    child: Image.asset(
+                      'assets/images/back.jpg',
+                      width: 25,
+                    ),
+                    onPressed: (){
+                      print("back pressed");
+                      setState(() {
+                        indexbg += 1;
+                        if (indexbg > 5){
+                          indexbg = 0;
+                        }
+                        print(indexbg);
+                        icolorbg = indexbg;
+                      });
+                    }
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                  width: 20,
+                  child: Image.asset(
+                      AvailableBackgrounds[indexbg],
+                      width: 25,
+                    )
+                ),
+                SizedBox(
+                  width: 25,
+                  height: 25,
+                  child: FloatingActionButton(
+                    child: Image.asset(
+                      'assets/images/front.jpg',
+                      width: 25,
+                    ),
+                    onPressed: (){
+                      print("front pressed");
+                      setState(() {
+                        indexbg -= 1;
+                        if (indexbg < 0){
+                          indexbg = 5;
+                        }
+                        print(indexbg);
+                        icolorbg = indexbg;
+                      });
+                    }
+                  ),
+                ),
               ],
             ),
             SizedBox(height: 30,),
@@ -193,6 +271,32 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                 Text("1"),
               ],
             ),
+            SizedBox(height: 20,),
+            Center(
+              child: TextButton(
+                  onPressed: () => {
+                    Navigator.of(context).pop()
+                  },
+                  child: Image.asset(
+                    'assets/images/close.jpg',
+                    width: 70,
+                  ),
+              ),
+              // child: SizedBox(
+              //   width: 100,
+              //   height: 150,
+              //   child: FloatingActionButton(
+              //     child: Image.asset(
+              //       'assets/images/close.jpg',
+              //       width: 160,
+              //     ),
+              //     onPressed: (){
+              //       print("close pressed");
+              //       Navigator.of(context).pop();
+              //     }
+              //   ),
+              // ),
+            )
           ],
         );
             },
@@ -204,7 +308,8 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return _controller.value.isInitialized
+        ? GestureDetector(
           behavior: HitTestBehavior.opaque,
             onTap: () {
               setState(() {
@@ -216,27 +321,83 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
               if([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)){
                 print('OKOKOKOKO');
               }
-              print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
-              ? winningvideoUrls[Random().nextInt(winningvideoUrls.length)]
-              : loosingvideoUrls[Random().nextInt(loosingvideoUrls.length)]);
-              
               _controller.dispose();
+              print("couleur du de");
+              print(icolor);
+              print("couleur background");
+              print(icolorbg);
+              if (icolor == 0){
+                // De bleu
+                if (icolorbg == 0){
+                  //  + Gazon vert
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
+                  : loosingvideoUrlsGazonDebleu[Random().nextInt(loosingvideoUrlsGazonDebleu.length)]);
 
-              _controller = VideoPlayerController.asset(
-                [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
-              ? winningvideoUrls[Random().nextInt(winningvideoUrls.length)]
-              : loosingvideoUrls[Random().nextInt(loosingvideoUrls.length)]
-              )..initialize().then((_) {
-                setState(() {
-                  print(icolor);
-                  print("+++++++++++Numbre de lance");
-                  print(tentativeCourrante);
-                  tentativeCourrante += 1;
-                });
-                
-                _controller.setVolume(0);
-                _controller.play();
-              });
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
+                  : loosingvideoUrlsGazonDebleu[Random().nextInt(loosingvideoUrlsGazonDebleu.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                      tentativeCourrante += 1;
+                    });
+                    print(_controller.dataSource);
+                    _controller.setVolume(0);
+                    _controller.play();
+                  });
+                }
+              }
+              if (icolor == 2){
+                // De vert
+                if (icolorbg == 0){
+                  //  + Gazon vert
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDevert[Random().nextInt(winningvideoUrlsGazonDevert.length)]
+                  : loosingvideoUrlsGazonDevert[Random().nextInt(loosingvideoUrlsGazonDevert.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDevert[Random().nextInt(winningvideoUrlsGazonDevert.length)]
+                  : loosingvideoUrlsGazonDevert[Random().nextInt(loosingvideoUrlsGazonDevert.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                      tentativeCourrante += 1;
+                    });
+                    
+                    _controller.setVolume(0);
+                    _controller.play();
+                  });
+                }
+              }
+              if (icolor == 1){
+                // De rouge
+                if (icolorbg == 0){
+                  //  + Gazon vert
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDerouge[Random().nextInt(winningvideoUrlsGazonDerouge.length)]
+                  : loosingvideoUrlsGazonDerouge[Random().nextInt(loosingvideoUrlsGazonDerouge.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDerouge[Random().nextInt(winningvideoUrlsGazonDerouge.length)]
+                  : loosingvideoUrlsGazonDerouge[Random().nextInt(loosingvideoUrlsGazonDerouge.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                      tentativeCourrante += 1;
+                    });
+                    
+                    _controller.setVolume(0);
+                    _controller.play();
+                  });
+                }
+              }
             },
             child: Stack(
               children: [
@@ -247,9 +408,9 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                     left: 125,
                     bottom: 10,
                     width: 40,
-                    child: FloatingActionButton(
+                    child: GestureDetector(
                       child: Image.asset('assets/images/quit.jpg'),
-                      onPressed: (){
+                      onTap: (){
                         print("toto");
                       }
                     ),
@@ -260,9 +421,9 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                     left: 185,
                     bottom: 10,
                     width: 40,
-                    child: FloatingActionButton(
+                    child: GestureDetector(
                     child: Image.asset('assets/images/help.jpg'),
-                    onPressed: (){
+                    onTap: (){
                       print("toto");
                     }
                   ),
@@ -273,9 +434,9 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                     left: 245,
                     bottom: 10,
                     width: 40,
-                    child: FloatingActionButton(
+                    child: GestureDetector(
                     child: Image.asset('assets/images/help2.jpg'),
-                    onPressed: (){
+                    onTap: (){
                       print("toto");
                     }
                   ),
@@ -286,9 +447,9 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                     left: 300,
                     bottom: 10,
                     width: 40,
-                    child: FloatingActionButton(
+                    child: GestureDetector(
                       child: Image.asset('assets/images/settings.jpg'),
-                      onPressed: (){
+                      onTap: (){
                       print("setting pressed");
                       dynamic(context);
                     }
@@ -300,7 +461,15 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
             //   aspectRatio: _controller.value.aspectRatio,
             //   child: VideoPlayer(_controller),
             // ),
-          );
+          )
+        : Container(
+          width: double.infinity,
+          height: double.infinity,
+          child: Image.asset(
+            'assets/images/gazon.jpg',
+            fit: BoxFit.cover,
+          ),
+        );
   }
 
   @override
