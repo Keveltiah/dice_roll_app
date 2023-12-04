@@ -107,6 +107,23 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     'assets/videos/Somme12_gazon_derouge.mp4'
   ];
 
+  List<String> winningvideoUrlsGazonDeblanc = [
+    'assets/videos/Somme4_gazon_deblanc.mp4',
+    'assets/videos/Somme6_gazon_deblanc.mp4',
+    'assets/videos/Somme7_gazon_deblanc.mp4',
+    'assets/videos/Somme3_gazon_deblanc.mp4',
+    'assets/videos/Somme5_gazon_deblanc.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDeblanc = [
+    'assets/videos/Somme2_gazon_deblanc.mp4',
+    'assets/videos/Somme8_gazon_deblanc.mp4',
+    'assets/videos/Somme9_gazon_deblanc.mp4',
+    'assets/videos/Somme11_gazon_deblanc.mp4',
+    'assets/videos/Somme10_gazon_deblanc.mp4',
+    'assets/videos/Somme12_gazon_deblanc.mp4'
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -129,177 +146,193 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
       int index = 0;
       int indexbg = 0;
       return AlertDialog(
-        content: StatefulBuilder(
-            builder: (BuildContext context, StateSetter setState) {
-              return ListView(
-          children: <Widget>[
-            Row(
-              children: [
-                Text(
-                  'Dice color',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
-                  )
-                ),
-                Padding(padding: EdgeInsets.only(left: 10)),
-                SizedBox(
-                  width: 25,
-                  height: 25,
-                  child: FloatingActionButton(
-                    child: Image.asset(
-                      'assets/images/back.jpg',
-                      width: 25,
+        content: Container(
+          height: 220,
+          child: StatefulBuilder(
+              builder: (BuildContext context, StateSetter setState) {
+                return ListView(
+                  children: <Widget>[
+                    Row(
+                      children: [
+                        Text(
+                          'Dice color',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold
+                          )
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 50)),
+                        Container(
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: SizedBox(
+                              width: 25,
+                              height: 25,
+                              child: FloatingActionButton(
+                                child: Image.asset(
+                                  'assets/images/back.jpg',
+                                  width: 25,
+                                ),
+                                onPressed: (){
+                                  print("back pressed");
+                                  setState(() {
+                                    index += 1;
+                                    if (index > 5){
+                                      index = 0;
+                                    }
+                                    print(index);
+                                    icolor = index;
+                                  });
+                                }
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 15)),
+                        SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: Image.asset(
+                              AvailableColors[index],
+                              width: 25,
+                            )
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 15)),
+                        SizedBox(
+                          width: 25,
+                          height: 25,
+                          child: FloatingActionButton(
+                            child: Image.asset(
+                              'assets/images/front.jpg',
+                              width: 25,
+                            ),
+                            onPressed: (){
+                              print("front pressed");
+                              setState(() {
+                                index -= 1;
+                                if (index < 0){
+                                  index = 5;
+                                }
+                                print(index);
+                                icolor = index;
+                              });
+                            }
+                          ),
+                        ),
+                      ],
                     ),
-                    onPressed: (){
-                      print("back pressed");
-                      setState(() {
-                        index += 1;
-                        if (index > 5){
-                          index = 0;
-                        }
-                        print(index);
-                        icolor = index;
-                      });
-                    }
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                  width: 20,
-                  child: Image.asset(
-                      AvailableColors[index],
-                      width: 25,
+                    SizedBox(height: 30,),
+                    Row(
+                      children: [
+                        Text(
+                          'Background',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold
+                          )
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 37)),
+                        SizedBox(
+                          width: 25,
+                          height: 25,
+                          child: FloatingActionButton(
+                            child: Image.asset(
+                              'assets/images/back.jpg',
+                              width: 25,
+                            ),
+                            onPressed: (){
+                              print("back pressed");
+                              setState(() {
+                                indexbg += 1;
+                                if (indexbg > 5){
+                                  indexbg = 0;
+                                }
+                                print(indexbg);
+                                icolorbg = indexbg;
+                              });
+                            }
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 15)),
+                        SizedBox(
+                          height: 20,
+                          width: 20,
+                          child: Image.asset(
+                              AvailableBackgrounds[indexbg],
+                              width: 25,
+                            )
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 15)),
+                        SizedBox(
+                          width: 25,
+                          height: 25,
+                          child: FloatingActionButton(
+                            child: Image.asset(
+                              'assets/images/front.jpg',
+                              width: 25,
+                            ),
+                            onPressed: (){
+                              print("front pressed");
+                              setState(() {
+                                indexbg -= 1;
+                                if (indexbg < 0){
+                                  indexbg = 5;
+                                }
+                                print(indexbg);
+                                icolorbg = indexbg;
+                              });
+                            }
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 30,),
+                    Row(
+                      children: [
+                        Text(
+                          'Show results',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold
+                          )
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 50)),
+                        // Text("1"),
+                      ],
+                    ),
+                    SizedBox(height: 20,),
+                    Center(
+                      child: TextButton(
+                          onPressed: () => {
+                            Navigator.of(context).pop()
+                          },
+                          child: Image.asset(
+                            'assets/images/close.jpg',
+                            width: 70,
+                          ),
+                      ),
                     )
-                ),
-                SizedBox(
-                  width: 25,
-                  height: 25,
-                  child: FloatingActionButton(
-                    child: Image.asset(
-                      'assets/images/front.jpg',
-                      width: 25,
-                    ),
-                    onPressed: (){
-                      print("front pressed");
-                      setState(() {
-                        index -= 1;
-                        if (index < 0){
-                          index = 5;
-                        }
-                        print(index);
-                        icolor = index;
-                      });
-                    }
-                  ),
-                ),
-              ],
+                  ],
+                );
+              },
             ),
-            SizedBox(height: 30,),
-            Row(
-              children: [
-                Text(
-                  'Background',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
-                  )
-                ),
-                Padding(padding: EdgeInsets.only(left: 10)),
-                SizedBox(
-                  width: 25,
-                  height: 25,
-                  child: FloatingActionButton(
-                    child: Image.asset(
-                      'assets/images/back.jpg',
-                      width: 25,
-                    ),
-                    onPressed: (){
-                      print("back pressed");
-                      setState(() {
-                        indexbg += 1;
-                        if (indexbg > 5){
-                          indexbg = 0;
-                        }
-                        print(indexbg);
-                        icolorbg = indexbg;
-                      });
-                    }
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                  width: 20,
-                  child: Image.asset(
-                      AvailableBackgrounds[indexbg],
-                      width: 25,
-                    )
-                ),
-                SizedBox(
-                  width: 25,
-                  height: 25,
-                  child: FloatingActionButton(
-                    child: Image.asset(
-                      'assets/images/front.jpg',
-                      width: 25,
-                    ),
-                    onPressed: (){
-                      print("front pressed");
-                      setState(() {
-                        indexbg -= 1;
-                        if (indexbg < 0){
-                          indexbg = 5;
-                        }
-                        print(indexbg);
-                        icolorbg = indexbg;
-                      });
-                    }
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(height: 30,),
-            Row(
-              children: [
-                Text(
-                  'Show results',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold
-                  )
-                ),
-                Padding(padding: EdgeInsets.only(left: 10)),
-                Text("1"),
-                Text("1"),
-                Text("1"),
-              ],
-            ),
-            SizedBox(height: 20,),
-            Center(
-              child: TextButton(
-                  onPressed: () => {
-                    Navigator.of(context).pop()
-                  },
-                  child: Image.asset(
-                    'assets/images/close.jpg',
-                    width: 70,
-                  ),
+        )
+      );
+    }
+  );
+}
+
+dynamicHelp (BuildContext context) {
+  showDialog(
+    barrierDismissible: false,
+    context: context,
+    builder: (BuildContext context) {
+      return Center(
+          child: TextButton(
+              onPressed: () => {
+                Navigator.of(context).pop()
+              },
+              child: Image.asset(
+                'assets/images/helpText.jpg',
+                width: 300,
               ),
-              // child: SizedBox(
-              //   width: 100,
-              //   height: 150,
-              //   child: FloatingActionButton(
-              //     child: Image.asset(
-              //       'assets/images/close.jpg',
-              //       width: 160,
-              //     ),
-              //     onPressed: (){
-              //       print("close pressed");
-              //       Navigator.of(context).pop();
-              //     }
-              //   ),
-              // ),
-            )
-          ],
-        );
-            },
           ),
       );
     }
@@ -398,6 +431,30 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                   });
                 }
               }
+              if (icolor == 4){
+                // De blanc
+                if (icolorbg == 0){
+                  //  + Gazon vert
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
+                  : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
+                  : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                      tentativeCourrante += 1;
+                    });
+                    
+                    _controller.setVolume(0);
+                    _controller.play();
+                  });
+                }
+              }
             },
             child: Stack(
               children: [
@@ -424,7 +481,7 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                     child: GestureDetector(
                     child: Image.asset('assets/images/help.jpg'),
                     onTap: (){
-                      print("toto");
+                      // dynamicHelp(context);
                     }
                   ),
                 ),
@@ -437,7 +494,7 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                     child: GestureDetector(
                     child: Image.asset('assets/images/help2.jpg'),
                     onTap: (){
-                      print("toto");
+                      dynamicHelp(context);
                     }
                   ),
                 ),
