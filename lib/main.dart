@@ -124,6 +124,40 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     'assets/videos/Somme12_gazon_deblanc.mp4'
   ];
 
+  List<String> winningvideoUrlsGazonDenoir = [
+    'assets/videos/Somme4_gazon_denoir.mp4',
+    'assets/videos/Somme6_gazon_denoir.mp4',
+    'assets/videos/Somme7_gazon_denoir.mp4',
+    'assets/videos/Somme3_gazon_denoir.mp4',
+    'assets/videos/Somme5_gazon_denoir.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDenoir = [
+    'assets/videos/Somme2_gazon_denoir.mp4',
+    'assets/videos/Somme8_gazon_denoir.mp4',
+    'assets/videos/Somme9_gazon_denoir.mp4',
+    'assets/videos/Somme11_gazon_denoir.mp4',
+    'assets/videos/Somme10_gazon_denoir.mp4',
+    'assets/videos/Somme12_gazon_denoir.mp4'
+  ];
+
+  List<String> winningvideoUrlsGazonDejaune = [
+    'assets/videos/Somme4_gazon_dejaune.mp4',
+    'assets/videos/Somme6_gazon_dejaune.mp4',
+    'assets/videos/Somme7_gazon_dejaune.mp4',
+    'assets/videos/Somme3_gazon_dejaune.mp4',
+    'assets/videos/Somme5_gazon_dejaune.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDejaune = [
+    'assets/videos/Somme2_gazon_dejaune.mp4',
+    'assets/videos/Somme8_gazon_dejaune.mp4',
+    'assets/videos/Somme9_gazon_dejaune.mp4',
+    'assets/videos/Somme11_gazon_dejaune.mp4',
+    'assets/videos/Somme10_gazon_dejaune.mp4',
+    'assets/videos/Somme12_gazon_dejaune.mp4'
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -443,6 +477,54 @@ dynamicHelp (BuildContext context) {
                   [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
                   : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                      tentativeCourrante += 1;
+                    });
+                    
+                    _controller.setVolume(0);
+                    _controller.play();
+                  });
+                }
+              }
+              if (icolor == 3){
+                // De noir
+                if (icolorbg == 0){
+                  //  + Gazon vert
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDenoir[Random().nextInt(winningvideoUrlsGazonDenoir.length)]
+                  : loosingvideoUrlsGazonDenoir[Random().nextInt(loosingvideoUrlsGazonDenoir.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDenoir[Random().nextInt(winningvideoUrlsGazonDenoir.length)]
+                  : loosingvideoUrlsGazonDenoir[Random().nextInt(loosingvideoUrlsGazonDenoir.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                      tentativeCourrante += 1;
+                    });
+                    
+                    _controller.setVolume(0);
+                    _controller.play();
+                  });
+                }
+              }
+              if (icolor == 5){
+                // De jaune
+                if (icolorbg == 0){
+                  //  + Gazon vert
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDejaune[Random().nextInt(winningvideoUrlsGazonDejaune.length)]
+                  : loosingvideoUrlsGazonDejaune[Random().nextInt(loosingvideoUrlsGazonDejaune.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsGazonDejaune[Random().nextInt(winningvideoUrlsGazonDejaune.length)]
+                  : loosingvideoUrlsGazonDejaune[Random().nextInt(loosingvideoUrlsGazonDejaune.length)]
                   )..initialize().then((_) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
