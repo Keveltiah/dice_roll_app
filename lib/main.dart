@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math';
@@ -31,10 +33,12 @@ class RandomVideoPlayer extends StatefulWidget {
 
 class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
   late VideoPlayerController _controller;
+  late VideoPlayerController _controllerInit;
   late int tentativeCourrante;
   late int icolor;
   late int icolorbg;
   late String couleurDe;
+  late bool showHelp;
   
   List<String> AvailableColors = [
     'assets/images/bleu.jpg',
@@ -266,9 +270,15 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     tentativeCourrante = 1;
     icolor = 0;
     icolorbg = 0;
+    showHelp = false;
     // final prefs = await SharedPreferences.getInstance();
 
-    _controller = VideoPlayerController.asset('assets/videos/init.mp4'
+    _controller = VideoPlayerController.asset('assets/videos/initVert.mp4'
+    )..initialize().then((_) {
+        setState(() {});
+      });
+
+    _controllerInit = VideoPlayerController.asset('assets/videos/initVert.mp4'
     )..initialize().then((_) {
         setState(() {});
       });
@@ -281,9 +291,15 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     builder: (BuildContext context) {
       int index = 0;
       int indexbg = 0;
+      int diceCount = 1;
       return AlertDialog(
+        shape: RoundedRectangleBorder(
+            side: BorderSide(color: Colors.blue, width: 5.0),
+          borderRadius: BorderRadius.circular(10.0), // Set the border radius here
+        ),
         content: Container(
-          height: 220,
+
+          height: 250,
           child: StatefulBuilder(
               builder: (BuildContext context, StateSetter setState) {
                 return ListView(
@@ -291,22 +307,82 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                     Row(
                       children: [
                         Text(
-                          'Dice color',
+                          'Dice count:',
                           style: TextStyle(
                             fontWeight: FontWeight.bold
                           )
                         ),
-                        Padding(padding: EdgeInsets.only(left: 50)),
+                        Padding(padding: EdgeInsets.only(left: 25)),
                         Container(
                           child: Align(
                             alignment: Alignment.centerRight,
                             child: SizedBox(
-                              width: 25,
-                              height: 25,
+                              width: 30,
+                              height: 30,
                               child: FloatingActionButton(
                                 child: Image.asset(
                                   'assets/images/back.jpg',
-                                  width: 25,
+                                  width: 30,
+                                ),
+                                onPressed: (){
+                                  print("back pressed");
+                                  setState(() {
+                                    if (diceCount > 1){
+                                      diceCount -=1;
+                                    }
+                                  });
+                                }
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 25)),
+                        SizedBox(
+                          // height: 30,
+                          // width: 30,
+                          child: Text(diceCount.toString(), style: TextStyle(fontWeight: FontWeight.bold),)
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 25)),
+                        SizedBox(
+                          width: 30,
+                          height: 30,
+                          child: FloatingActionButton(
+                            child: Image.asset(
+                              'assets/images/front.jpg',
+                              width: 30,
+                            ),
+                            onPressed: (){
+                              print("front pressed");
+                              setState(() {
+                                if (diceCount < 5){
+                                  diceCount +=1;
+                                }
+                              });
+                            }
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 25,),
+                    Row(
+                      children: [
+                        Text(
+                          'Dice color:',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold
+                          )
+                        ),
+                        Padding(padding: EdgeInsets.only(left: 30)),
+                        Container(
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: SizedBox(
+                              width: 30,
+                              height: 30,
+                              child: FloatingActionButton(
+                                child: Image.asset(
+                                  'assets/images/back.jpg',
+                                  width: 30,
                                 ),
                                 onPressed: (){
                                   print("back pressed");
@@ -325,21 +401,21 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                         ),
                         Padding(padding: EdgeInsets.only(left: 15)),
                         SizedBox(
-                          height: 20,
-                          width: 20,
+                          height: 30,
+                          width: 30,
                           child: Image.asset(
                               AvailableColors[index],
-                              width: 25,
+                              width: 30,
                             )
                         ),
                         Padding(padding: EdgeInsets.only(left: 15)),
                         SizedBox(
-                          width: 25,
-                          height: 25,
+                          width: 30,
+                          height: 30,
                           child: FloatingActionButton(
                             child: Image.asset(
                               'assets/images/front.jpg',
-                              width: 25,
+                              width: 30,
                             ),
                             onPressed: (){
                               print("front pressed");
@@ -356,23 +432,23 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 30,),
+                    SizedBox(height: 25,),
                     Row(
                       children: [
                         Text(
-                          'Background',
+                          'Background:',
                           style: TextStyle(
                             fontWeight: FontWeight.bold
                           )
                         ),
-                        Padding(padding: EdgeInsets.only(left: 37)),
+                        Padding(padding: EdgeInsets.only(left: 17)),
                         SizedBox(
-                          width: 25,
-                          height: 25,
+                          width: 30,
+                          height: 30,
                           child: FloatingActionButton(
                             child: Image.asset(
                               'assets/images/back.jpg',
-                              width: 25,
+                              width: 30,
                             ),
                             onPressed: (){
                               print("back pressed");
@@ -389,11 +465,11 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                         ),
                         Padding(padding: EdgeInsets.only(left: 15)),
                         SizedBox(
-                          height: 20,
-                          width: 20,
+                          height: 30,
+                          width: 30,
                           child: Image.asset(
                               AvailableBackgrounds[indexbg],
-                              width: 25,
+                              width: 30,
                             )
                         ),
                         Padding(padding: EdgeInsets.only(left: 15)),
@@ -420,20 +496,26 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                         ),
                       ],
                     ),
-                    SizedBox(height: 30,),
+                    SizedBox(height: 15,),
                     Row(
                       children: [
                         Text(
-                          'Show results',
+                          'Show results:',
                           style: TextStyle(
                             fontWeight: FontWeight.bold
                           )
                         ),
-                        Padding(padding: EdgeInsets.only(left: 50)),
-                        // Text("1"),
+                        Padding(padding: EdgeInsets.only(left: 10)),
+                       TextButton(
+                          onPressed: () => {
+                          },
+                          child: Image.asset(
+                            'assets/images/showresult.jpg',
+                            width: 70,
+                          ),
+                      )
                       ],
                     ),
-                    SizedBox(height: 20,),
                     Center(
                       child: TextButton(
                           onPressed: () => {
@@ -441,7 +523,7 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                           },
                           child: Image.asset(
                             'assets/images/close.jpg',
-                            width: 70,
+                            width: 60,
                           ),
                       ),
                     )
@@ -470,6 +552,103 @@ dynamicHelp (BuildContext context) {
                 width: 300,
               ),
           ),
+      );
+    }
+  );
+}
+
+// QuitMenu (BuildContext context) {
+//   showDialog(
+    
+//     barrierDismissible: false,
+//     context: context,
+//     builder: (BuildContext context) {
+//       AlertDialog(
+//         shape: RoundedRectangleBorder(
+//             side: BorderSide(color: Colors.blue, width: 5.0),
+//           borderRadius: BorderRadius.circular(10.0),
+//         ),
+//       content: Container(
+//         height: 200,
+//         child: Column(
+//           children: [
+//             TextButton(
+//               onPressed: () => {
+//               },
+//               child: Image.asset(
+//                 'assets/images/quitmessage.jpg',
+//                 width: 30,
+//               ),
+//             )
+//           ]
+//         ),
+//           // child: TextButton(
+//           //     onPressed: () => {
+//           //       Navigator.of(context).pop()
+//           //     },
+//           //     child: Image.asset(
+//           //       'assets/images/helpText.jpg',
+//           //       width: 300,
+//           //     ),
+//           // ),
+//       )
+//       );
+//     }
+//   );
+// }
+
+dynamicHelp1 (BuildContext context) {
+  showDialog(
+    barrierDismissible: false,
+    context: context,
+    builder: (BuildContext context) {
+      return Align(
+        alignment: Alignment.bottomCenter, // Set the alignment to bottom center
+        child: Container(
+          // widthFactor: 0.8, // Set the width factor to 80% of the screen width
+          child: AlertDialog(
+            content: TextButton(
+                onPressed: () => {
+                },
+                child: Text(
+                  "Are you sure you want to quit?",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 16
+                  ),
+                ),
+            ),
+            actions: <Widget>[
+              Row(
+                children: [
+                  Expanded(
+                    child: TextButton(
+                        onPressed: () {
+                          exit(0);
+                        },
+                        child: Image.asset(
+                          'assets/images/yes.jpg',
+                          width: 50,
+                        ),
+                    ),
+                  ),
+                  Expanded(
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Image.asset(
+                        'assets/images/no.jpg',
+                        width: 50,
+                      ),
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
       );
     }
   );
@@ -782,12 +961,12 @@ dynamicHelp (BuildContext context) {
                     // top: 0,
                     // right: 0,
                     left: 125,
-                    bottom: 10,
+                    bottom: 40,
                     width: 40,
                     child: GestureDetector(
                       child: Image.asset('assets/images/quit.jpg'),
                       onTap: (){
-                        print("toto");
+                        dynamicHelp1(context);
                       }
                     ),
                   ),
@@ -795,12 +974,14 @@ dynamicHelp (BuildContext context) {
                     // top: 0,
                     // right: 0,
                     left: 185,
-                    bottom: 10,
+                    bottom: 40,
                     width: 40,
                     child: GestureDetector(
                     child: Image.asset('assets/images/help.jpg'),
                     onTap: (){
-                      // dynamicHelp(context);
+                      setState(() {
+                        showHelp = true;
+                      });
                     }
                   ),
                 ),
@@ -808,7 +989,7 @@ dynamicHelp (BuildContext context) {
                     // top: 0,
                     // right: 0,
                     left: 245,
-                    bottom: 10,
+                    bottom: 40,
                     width: 40,
                     child: GestureDetector(
                     child: Image.asset('assets/images/help2.jpg'),
@@ -821,7 +1002,7 @@ dynamicHelp (BuildContext context) {
                     // top: 0,
                     // right: 0,
                     left: 300,
-                    bottom: 10,
+                    bottom: 40,
                     width: 40,
                     child: GestureDetector(
                       child: Image.asset('assets/images/settings.jpg'),
@@ -831,6 +1012,25 @@ dynamicHelp (BuildContext context) {
                     }
                   ),
                 ),
+                showHelp == true 
+                ?Positioned(
+                      // top: 0,
+                      // right: 1,
+                      left: 1,
+                      bottom: 5,
+                      // width: 300,
+                      child: GestureDetector(
+                        child: Image.asset(
+                          'assets/images/helpText2.jpg',
+                          width: MediaQuery.of(context).size.width,
+                        ),
+                        onTap: (){
+                          setState(() {
+                            showHelp = false;
+                          });
+                      }
+                    ),
+                  ): Text(""),
               ],
             )
             // child: AspectRatio(
@@ -838,14 +1038,85 @@ dynamicHelp (BuildContext context) {
             //   child: VideoPlayer(_controller),
             // ),
           )
-        : Container(
-          width: double.infinity,
-          height: double.infinity,
-          child: Image.asset(
-            'assets/images/gazon.jpg',
-            fit: BoxFit.cover,
-          ),
-        );
+        : Stack(
+              children: [
+                VideoPlayer(_controller),
+                  Positioned(
+                    // top: 0,
+                    // right: 0,
+                    left: 125,
+                    bottom: 40,
+                    width: 40,
+                    child: GestureDetector(
+                      child: Image.asset('assets/images/quit.jpg'),
+                      onTap: (){
+                        dynamicHelp1(context);
+                      }
+                    ),
+                  ),
+                Positioned(
+                    // top: 0,
+                    // right: 0,
+                    left: 185,
+                    bottom: 40,
+                    width: 40,
+                    child: GestureDetector(
+                    child: Image.asset('assets/images/help.jpg'),
+                    onTap: (){
+                      setState(() {
+                        showHelp = true;
+                      });
+                    }
+                  ),
+                ),
+                Positioned(
+                    // top: 0,
+                    // right: 0,
+                    left: 245,
+                    bottom: 40,
+                    width: 40,
+                    child: GestureDetector(
+                    child: Image.asset('assets/images/help2.jpg'),
+                    onTap: (){
+                      dynamicHelp(context);
+                    }
+                  ),
+                ),
+                Positioned(
+                    // top: 0,
+                    // right: 0,
+                    left: 300,
+                    bottom: 40,
+                    width: 40,
+                    child: GestureDetector(
+                      child: Image.asset('assets/images/settings.jpg'),
+                      onTap: (){
+                      print("setting pressed");
+                      dynamic(context);
+                    }
+                  ),
+                ),
+                showHelp == true 
+                ?Positioned(
+                      // top: 0,
+                      // right: 1,
+                      left: 1,
+                      bottom: 5,
+                      // width: 300,
+                      child: GestureDetector(
+                        child: Image.asset(
+                          'assets/images/helpText2.jpg',
+                          width: MediaQuery.of(context).size.width,
+                        ),
+                        onTap: (){
+                          setState(() {
+                            showHelp = false;
+                          });
+                      }
+                    ),
+                  ): Text(""),
+              ],
+            );
   }
 
   @override
