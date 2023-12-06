@@ -459,6 +459,12 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                                 }
                                 print(indexbg);
                                 icolorbg = indexbg;
+                                if (icolorbg == 1){
+                                  _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
+                                  )..initialize().then((_) {
+                                      setState(() {});
+                                    });
+                                }
                               });
                             }
                           ),
@@ -490,6 +496,12 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                                 }
                                 print(indexbg);
                                 icolorbg = indexbg;
+                                if (icolorbg == 1){
+                                  _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
+                                  )..initialize().then((_) {
+                                      setState(() {});
+                                    });
+                                }
                               });
                             }
                           ),
@@ -519,7 +531,8 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                     Center(
                       child: TextButton(
                           onPressed: () => {
-                            Navigator.of(context).pop()
+                            Navigator.of(context).pop(),
+                            setState(() {})
                           },
                           child: Image.asset(
                             'assets/images/close.jpg',
@@ -556,46 +569,6 @@ dynamicHelp (BuildContext context) {
     }
   );
 }
-
-// QuitMenu (BuildContext context) {
-//   showDialog(
-    
-//     barrierDismissible: false,
-//     context: context,
-//     builder: (BuildContext context) {
-//       AlertDialog(
-//         shape: RoundedRectangleBorder(
-//             side: BorderSide(color: Colors.blue, width: 5.0),
-//           borderRadius: BorderRadius.circular(10.0),
-//         ),
-//       content: Container(
-//         height: 200,
-//         child: Column(
-//           children: [
-//             TextButton(
-//               onPressed: () => {
-//               },
-//               child: Image.asset(
-//                 'assets/images/quitmessage.jpg',
-//                 width: 30,
-//               ),
-//             )
-//           ]
-//         ),
-//           // child: TextButton(
-//           //     onPressed: () => {
-//           //       Navigator.of(context).pop()
-//           //     },
-//           //     child: Image.asset(
-//           //       'assets/images/helpText.jpg',
-//           //       width: 300,
-//           //     ),
-//           // ),
-//       )
-//       );
-//     }
-//   );
-// }
 
 dynamicHelp1 (BuildContext context) {
   showDialog(
@@ -690,11 +663,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     print(_controller.dataSource);
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
                 if (icolorbg == 1){
@@ -711,11 +696,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     print(_controller.dataSource);
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
               }
@@ -738,11 +735,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
                 if (icolorbg == 1){
@@ -759,11 +768,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     print(_controller.dataSource);
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
               }
@@ -786,11 +807,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
                 if (icolorbg == 1){
@@ -807,11 +840,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     print(_controller.dataSource);
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
               }
@@ -831,11 +876,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
                 if (icolorbg == 1){
@@ -852,11 +909,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     print(_controller.dataSource);
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
               }
@@ -876,11 +945,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
                 if (icolorbg == 1){
@@ -897,11 +978,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     print(_controller.dataSource);
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
               }
@@ -924,11 +1017,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
                 if (icolorbg == 1){
@@ -945,11 +1050,23 @@ dynamicHelp1 (BuildContext context) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
                       print(tentativeCourrante);
-                      tentativeCourrante += 1;
                     });
                     print(_controller.dataSource);
                     _controller.setVolume(0);
                     _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
                   });
                 }
               }
@@ -1040,7 +1157,7 @@ dynamicHelp1 (BuildContext context) {
           )
         : Stack(
               children: [
-                VideoPlayer(_controller),
+                VideoPlayer(_controllerInit),
                   Positioned(
                     // top: 0,
                     // right: 0,
@@ -1121,6 +1238,7 @@ dynamicHelp1 (BuildContext context) {
 
   @override
   void dispose() {
+    _controller.removeListener(() {});
     _controller.dispose();
     super.dispose();
   }
