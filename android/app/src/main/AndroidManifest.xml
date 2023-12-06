@@ -2,7 +2,7 @@
     package="com.example.dice_roll_app">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="dice_roll_app"
+        android:label="Shake Dice 3d"
         android:usesCleartextTraffic="true"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

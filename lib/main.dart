@@ -53,9 +53,9 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     'assets/images/backgroundgvert.jpg',
     'assets/images/backgroundmarron.jpg',
     'assets/images/backgroundblanc.jpg',
-    'assets/images/backgroundblanc2.jpg',
-    'assets/images/backgroundmarron2.jpg',
-    'assets/images/backgroundblancraille.jpg',
+    // 'assets/images/backgroundblanc2.jpg',
+    // 'assets/images/backgroundmarron2.jpg',
+    // 'assets/images/backgroundblancraille.jpg',
   ];
 
 
@@ -264,6 +264,108 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     'assets/videos/Somme12_tapi_marron_dejaune.mp4'
   ];
 
+  List<String> winningvideoUrlsTapiBlancDebleu = [
+    'assets/videos/Somme4_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme6_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme7_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme3_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme5_tapi_blanc_debleu.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDebleu= [
+    'assets/videos/Somme2_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme8_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme9_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme11_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme10_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme12_tapi_blanc_debleu.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDevert = [
+    'assets/videos/Somme4_tapi_blanc_devert.mp4',
+    'assets/videos/Somme6_tapi_blanc_devert.mp4',
+    'assets/videos/Somme7_tapi_blanc_devert.mp4',
+    'assets/videos/Somme3_tapi_blanc_devert.mp4',
+    'assets/videos/Somme5_tapi_blanc_devert.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDevert = [
+    'assets/videos/Somme2_tapi_blanc_devert.mp4',
+    'assets/videos/Somme8_tapi_blanc_devert.mp4',
+    'assets/videos/Somme9_tapi_blanc_devert.mp4',
+    'assets/videos/Somme11_tapi_blanc_devert.mp4',
+    'assets/videos/Somme10_tapi_blanc_devert.mp4',
+    'assets/videos/Somme12_tapi_blanc_devert.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDerouge= [
+    'assets/videos/Somme4_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme6_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme7_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme3_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme5_tapi_blanc_derouge.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDerouge = [
+    'assets/videos/Somme2_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme8_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme9_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme11_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme10_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme12_tapi_blanc_derouge.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDeblanc= [
+    'assets/videos/Somme4_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme6_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme7_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme3_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme5_tapi_blanc_deblanc.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDeblanc = [
+    'assets/videos/Somme2_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme8_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme9_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme11_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme10_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme12_tapi_blanc_deblanc.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDenoir= [
+    'assets/videos/Somme4_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme6_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme7_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme3_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme5_tapi_blanc_denoir.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDenoir = [
+    'assets/videos/Somme2_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme8_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme9_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme11_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme10_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme12_tapi_blanc_denoir.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDejaune= [
+    'assets/videos/Somme4_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme6_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme7_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme3_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme5_tapi_blanc_dejaune.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDejaune= [
+    'assets/videos/Somme2_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme8_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme9_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme11_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme10_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme12_tapi_blanc_dejaune.mp4'
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -291,7 +393,7 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     builder: (BuildContext context) {
       int index = 0;
       int indexbg = 0;
-      int diceCount = 1;
+      int diceCount = 2;
       return AlertDialog(
         shape: RoundedRectangleBorder(
             side: BorderSide(color: Colors.blue, width: 5.0),
@@ -454,17 +556,17 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                               print("back pressed");
                               setState(() {
                                 indexbg += 1;
-                                if (indexbg > 5){
+                                if (indexbg > 2){
                                   indexbg = 0;
                                 }
                                 print(indexbg);
                                 icolorbg = indexbg;
-                                if (icolorbg == 1){
-                                  _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
-                                  )..initialize().then((_) {
-                                      setState(() {});
-                                    });
-                                }
+                                // if (icolorbg == 1){
+                                //   _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
+                                //   )..initialize().then((_) {
+                                //       setState(() {});
+                                //     });
+                                // }
                               });
                             }
                           ),
@@ -492,15 +594,15 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                               setState(() {
                                 indexbg -= 1;
                                 if (indexbg < 0){
-                                  indexbg = 5;
+                                  indexbg = 2;
                                 }
                                 print(indexbg);
                                 icolorbg = indexbg;
                                 if (icolorbg == 1){
-                                  _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
-                                  )..initialize().then((_) {
-                                      setState(() {});
-                                    });
+                                  // _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
+                                  // )..initialize().then((_) {
+                                  //     setState(() {});
+                                  //   });
                                 }
                               });
                             }
@@ -602,7 +704,7 @@ dynamicHelp1 (BuildContext context) {
                         },
                         child: Image.asset(
                           'assets/images/yes.jpg',
-                          width: 50,
+                          width: 60,
                         ),
                     ),
                   ),
@@ -613,7 +715,7 @@ dynamicHelp1 (BuildContext context) {
                       },
                       child: Image.asset(
                         'assets/images/no.jpg',
-                        width: 50,
+                        width: 60,
                       ),
                     ),
                   ),
@@ -715,6 +817,39 @@ dynamicHelp1 (BuildContext context) {
                     });
                   });
                 }
+                if (icolorbg == 2){
+                  //  + Gazon blanc
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDebleu[Random().nextInt(winningvideoUrlsTapiBlancDebleu.length)]
+                  : loosingvideoUrlsTapiBlancDebleu[Random().nextInt(loosingvideoUrlsTapiBlancDebleu.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDebleu[Random().nextInt(winningvideoUrlsTapiBlancDebleu.length)]
+                  : loosingvideoUrlsTapiBlancDebleu[Random().nextInt(loosingvideoUrlsTapiBlancDebleu.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                    });
+                    print(_controller.dataSource);
+                    _controller.setVolume(0);
+                    _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
+                  });
+                }
               }
 
 
@@ -764,6 +899,40 @@ dynamicHelp1 (BuildContext context) {
                   [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDevert[Random().nextInt(winningvideoUrlsTapiMarronDevert.length)]
                   : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                    });
+                    print(_controller.dataSource);
+                    _controller.setVolume(0);
+                    _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
+                  });
+                }
+                
+                if (icolorbg == 2){
+                  //  + Gazon blanc
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDevert[Random().nextInt(winningvideoUrlsTapiBlancDevert.length)]
+                  : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDevert[Random().nextInt(winningvideoUrlsTapiBlancDevert.length)]
+                  : loosingvideoUrlsTapiBlancDevert[Random().nextInt(loosingvideoUrlsTapiBlancDevert.length)]
                   )..initialize().then((_) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
@@ -859,6 +1028,40 @@ dynamicHelp1 (BuildContext context) {
                     });
                   });
                 }
+
+                if (icolorbg == 2){
+                  //  + Gazon blanc
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDerouge[Random().nextInt(winningvideoUrlsTapiBlancDerouge.length)]
+                  : loosingvideoUrlsTapiBlancDerouge[Random().nextInt(loosingvideoUrlsTapiBlancDerouge.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDerouge[Random().nextInt(winningvideoUrlsTapiBlancDerouge.length)]
+                  : loosingvideoUrlsTapiBlancDerouge[Random().nextInt(loosingvideoUrlsTapiBlancDerouge.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                    });
+                    print(_controller.dataSource);
+                    _controller.setVolume(0);
+                    _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
+                  });
+                }
               }
               if (icolor == 4){
                 // De blanc
@@ -905,6 +1108,39 @@ dynamicHelp1 (BuildContext context) {
                   [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDeblanc[Random().nextInt(winningvideoUrlsTapiMarronDeblanc.length)]
                   : loosingvideoUrlsTapiMarronDeblanc[Random().nextInt(loosingvideoUrlsTapiMarronDeblanc.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                    });
+                    print(_controller.dataSource);
+                    _controller.setVolume(0);
+                    _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
+                  });
+                }
+                if (icolorbg == 2){
+                  //  + Gazon blanc
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDeblanc[Random().nextInt(winningvideoUrlsTapiBlancDeblanc.length)]
+                  : loosingvideoUrlsTapiBlancDeblanc[Random().nextInt(loosingvideoUrlsTapiBlancDeblanc.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDeblanc[Random().nextInt(winningvideoUrlsTapiBlancDeblanc.length)]
+                  : loosingvideoUrlsTapiBlancDeblanc[Random().nextInt(loosingvideoUrlsTapiBlancDeblanc.length)]
                   )..initialize().then((_) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
@@ -997,6 +1233,40 @@ dynamicHelp1 (BuildContext context) {
                     });
                   });
                 }
+
+                if (icolorbg == 2){
+                  //  + Gazon blanc
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDenoir[Random().nextInt(winningvideoUrlsTapiBlancDenoir.length)]
+                  : loosingvideoUrlsTapiBlancDenoir[Random().nextInt(loosingvideoUrlsTapiBlancDenoir.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDenoir[Random().nextInt(winningvideoUrlsTapiBlancDenoir.length)]
+                  : loosingvideoUrlsTapiBlancDenoir[Random().nextInt(loosingvideoUrlsTapiBlancDenoir.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                    });
+                    print(_controller.dataSource);
+                    _controller.setVolume(0);
+                    _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
+                  });
+                }
               }
 
 
@@ -1046,6 +1316,39 @@ dynamicHelp1 (BuildContext context) {
                   [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDejaune[Random().nextInt(winningvideoUrlsTapiMarronDejaune.length)]
                   : loosingvideoUrlsTapiMarronDejaune[Random().nextInt(loosingvideoUrlsTapiMarronDejaune.length)]
+                  )..initialize().then((_) {
+                    setState(() {
+                      print("+++++++++++Numbre de lance");
+                      print(tentativeCourrante);
+                    });
+                    print(_controller.dataSource);
+                    _controller.setVolume(0);
+                    _controller.play();
+                    bool listened = false;
+                    _controller.addListener(() {
+                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+                        print(listened);
+                        if (listened == false){
+                          print("-1--FIN---");
+                          listened = true;
+                          tentativeCourrante += 1;
+                          }
+                        }else{
+                          listened = false;
+                        }
+                    });
+                  });
+                }
+                if (icolorbg == 2){
+                  //  + Gazon marron
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDejaune[Random().nextInt(winningvideoUrlsTapiBlancDejaune.length)]
+                  : loosingvideoUrlsTapiBlancDejaune[Random().nextInt(loosingvideoUrlsTapiBlancDejaune.length)]);
+
+                  _controller = VideoPlayerController.asset(
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  ? winningvideoUrlsTapiBlancDejaune[Random().nextInt(winningvideoUrlsTapiBlancDejaune.length)]
+                  : loosingvideoUrlsTapiBlancDejaune[Random().nextInt(loosingvideoUrlsTapiBlancDejaune.length)]
                   )..initialize().then((_) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
@@ -1157,7 +1460,7 @@ dynamicHelp1 (BuildContext context) {
           )
         : Stack(
               children: [
-                VideoPlayer(_controllerInit),
+                VideoPlayer(_controller),
                   Positioned(
                     // top: 0,
                     // right: 0,
@@ -1240,6 +1543,7 @@ dynamicHelp1 (BuildContext context) {
   void dispose() {
     _controller.removeListener(() {});
     _controller.dispose();
+    _controllerInit.dispose();
     super.dispose();
   }
 }
