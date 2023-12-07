@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:just_audio/just_audio.dart';
+import 'package:flutter_ffmpeg/flutter_ffmpeg.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,6 +41,18 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
   late int icolorbg;
   late String couleurDe;
   late bool showHelp;
+  late FlutterFFmpeg _flutterFFmpeg;
+  late int nombreDeFoisEstApparu2;
+  late int nombreDeFoisEstApparu3;
+  late int nombreDeFoisEstApparu4;
+  late int nombreDeFoisEstApparu5;
+  late int nombreDeFoisEstApparu6;
+  late int nombreDeFoisEstApparu7;
+  late int nombreDeFoisEstApparu8;
+  late int nombreDeFoisEstApparu9;
+  late int nombreDeFoisEstApparu10;
+  late int nombreDeFoisEstApparu11;
+  late int nombreDeFoisEstApparu12;
   
   List<String> AvailableColors = [
     'assets/images/bleu.jpg',
@@ -373,9 +387,20 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     icolor = 0;
     icolorbg = 0;
     showHelp = false;
+    nombreDeFoisEstApparu2 = 0;
+    nombreDeFoisEstApparu3 = 0;
+    nombreDeFoisEstApparu4 = 0;
+    nombreDeFoisEstApparu5 = 0;
+    nombreDeFoisEstApparu6 = 0;
+    nombreDeFoisEstApparu7 = 0;
+    nombreDeFoisEstApparu8 = 0;
+    nombreDeFoisEstApparu9 = 0;
+    nombreDeFoisEstApparu10 = 0;
+    nombreDeFoisEstApparu11 = 0;
+    nombreDeFoisEstApparu12 = 0;
     // final prefs = await SharedPreferences.getInstance();
 
-    _controller = VideoPlayerController.asset('assets/videos/initVert.mp4'
+    _controller = VideoPlayerController.asset('assets/videos/init.mp4'
     )..initialize().then((_) {
         setState(() {});
       });
@@ -561,12 +586,19 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                                 }
                                 print(indexbg);
                                 icolorbg = indexbg;
-                                // if (icolorbg == 1){
-                                //   _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
-                                //   )..initialize().then((_) {
-                                //       setState(() {});
-                                //     });
-                                // }
+                                _controllerInit.dispose();
+                                if (icolorbg == 0){
+                                  _controllerInit = VideoPlayerController.asset('assets/videos/initVert.mp4'
+                                  );
+                                }
+                                if (icolorbg == 1){
+                                  _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
+                                  );
+                                }
+                                if (icolorbg == 2){
+                                  _controllerInit = VideoPlayerController.asset('assets/videos/initBlanc.mp4'
+                                  );
+                                }
                               });
                             }
                           ),
@@ -598,11 +630,18 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                                 }
                                 print(indexbg);
                                 icolorbg = indexbg;
+                                _controllerInit.dispose();
+                                if (icolorbg == 0){
+                                  _controllerInit = VideoPlayerController.asset('assets/videos/initVert.mp4'
+                                  );
+                                }
                                 if (icolorbg == 1){
-                                  // _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
-                                  // )..initialize().then((_) {
-                                  //     setState(() {});
-                                  //   });
+                                  _controllerInit = VideoPlayerController.asset('assets/videos/initMarron.mp4'
+                                  );
+                                }
+                                if (icolorbg == 2){
+                                  _controllerInit = VideoPlayerController.asset('assets/videos/initBlanc.mp4'
+                                  );
                                 }
                               });
                             }
@@ -634,7 +673,9 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
                       child: TextButton(
                           onPressed: () => {
                             Navigator.of(context).pop(),
-                            setState(() {})
+                            setState(() {
+                              _controllerInit.initialize();
+                            })
                           },
                           child: Image.asset(
                             'assets/images/close.jpg',
@@ -682,6 +723,10 @@ dynamicHelp1 (BuildContext context) {
         child: Container(
           // widthFactor: 0.8, // Set the width factor to 80% of the screen width
           child: AlertDialog(
+            shape: RoundedRectangleBorder(
+                side: BorderSide(color: Colors.blue, width: 5.0),
+              borderRadius: BorderRadius.circular(10.0), // Set the border radius here
+            ),
             content: TextButton(
                 onPressed: () => {
                 },
@@ -728,20 +773,33 @@ dynamicHelp1 (BuildContext context) {
     }
   );
 }
+// Future<void> _mergeAudioAndVideo() async {
+//     final audioPath = 'path/to/audio.mp3';
+//     final videoPath = 'path/to/video.mp4';
+//     final outputPath = 'path/to/output.mp4';
 
+//     final arguments = '-i $videoPath -i $audioPath -c:v copy -c:a aac -strict experimental -map 0:v:0 -map 1:a:0 $outputPath';
+
+//     await _flutterFFmpeg.execute(arguments);
+
+//     setState(() {
+//       _controller = VideoPlayerController.file(File(outputPath));
+//       _controller.play();
+//     });
+//   }
   @override
   Widget build(BuildContext context) {
     return _controller.value.isInitialized
         ? GestureDetector(
           behavior: HitTestBehavior.opaque,
-            onTap: () {
+            onTap: () async {
               setState(() {
-                if (tentativeCourrante > 21){
+                if (tentativeCourrante > 22){
                   print("+++++++++Reinitialisation a 1");
                   tentativeCourrante = 1;
                 }
               });
-              if([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)){
+              if([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)){
                 print('OKOKOKOKO');
               }
               _controller.dispose();
@@ -753,12 +811,12 @@ dynamicHelp1 (BuildContext context) {
                 // De bleu
                 if (icolorbg == 0){
                   //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
                   : loosingvideoUrlsGazonDebleu[Random().nextInt(loosingvideoUrlsGazonDebleu.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
                   : loosingvideoUrlsGazonDebleu[Random().nextInt(loosingvideoUrlsGazonDebleu.length)]
                   )..initialize().then((_) {
@@ -767,9 +825,17 @@ dynamicHelp1 (BuildContext context) {
                       print(tentativeCourrante);
                     });
                     print(_controller.dataSource);
+                    List<String> liste = _controller.dataSource.split("Somme");
+                    String somme = liste[1][0];
+                    print("somme faite");
+                    print(somme);
+                    if (["2", "3", "11", "12"].contains(somme)){
+                      nombreDeFoisEstApparu2 += 1;
+                    }
                     _controller.setVolume(0);
                     _controller.play();
                     bool listened = false;
+                    bool listenedForAudio = false;
                     _controller.addListener(() {
                         if (_controller.value.position >= _controller.value.duration * 0.33333333) {
                         print(listened);
@@ -781,17 +847,33 @@ dynamicHelp1 (BuildContext context) {
                         }else{
                           listened = false;
                         }
+
+                        // if (_controller.value.position <= _controller.value.duration * 0.1666666666666) {
+                        // print(listenedForAudio);
+                        // if (listenedForAudio == false){
+                        //   print("--Lancement du Son");
+                        //   // setState(() {
+                        //     AudioPlayer player = AudioPlayer();
+                        //     player.setAsset('assets/audios/rolling-dice.mp3');
+                        //     player.play();
+                        //   // });
+                        //   listenedForAudio = true;
+                        //   tentativeCourrante += 1;
+                        //   }
+                        // }else{
+                        //   listenedForAudio = false;
+                        // }
                     });
                   });
                 }
                 if (icolorbg == 1){
                   //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDebleu[Random().nextInt(winningvideoUrlsTapiMarronDebleu.length)]
                   : loosingvideoUrlsTapiMarronDebleu[Random().nextInt(loosingvideoUrlsTapiMarronDebleu.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDebleu[Random().nextInt(winningvideoUrlsTapiMarronDebleu.length)]
                   : loosingvideoUrlsTapiMarronDebleu[Random().nextInt(loosingvideoUrlsTapiMarronDebleu.length)]
                   )..initialize().then((_) {
@@ -819,12 +901,12 @@ dynamicHelp1 (BuildContext context) {
                 }
                 if (icolorbg == 2){
                   //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDebleu[Random().nextInt(winningvideoUrlsTapiBlancDebleu.length)]
                   : loosingvideoUrlsTapiBlancDebleu[Random().nextInt(loosingvideoUrlsTapiBlancDebleu.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDebleu[Random().nextInt(winningvideoUrlsTapiBlancDebleu.length)]
                   : loosingvideoUrlsTapiBlancDebleu[Random().nextInt(loosingvideoUrlsTapiBlancDebleu.length)]
                   )..initialize().then((_) {
@@ -858,12 +940,12 @@ dynamicHelp1 (BuildContext context) {
                 // De vert
                 if (icolorbg == 0){
                   //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDevert[Random().nextInt(winningvideoUrlsGazonDevert.length)]
                   : loosingvideoUrlsGazonDevert[Random().nextInt(loosingvideoUrlsGazonDevert.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDevert[Random().nextInt(winningvideoUrlsGazonDevert.length)]
                   : loosingvideoUrlsGazonDevert[Random().nextInt(loosingvideoUrlsGazonDevert.length)]
                   )..initialize().then((_) {
@@ -891,12 +973,12 @@ dynamicHelp1 (BuildContext context) {
                 }
                 if (icolorbg == 1){
                   //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDevert[Random().nextInt(winningvideoUrlsTapiMarronDevert.length)]
                   : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDevert[Random().nextInt(winningvideoUrlsTapiMarronDevert.length)]
                   : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]
                   )..initialize().then((_) {
@@ -925,12 +1007,12 @@ dynamicHelp1 (BuildContext context) {
                 
                 if (icolorbg == 2){
                   //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDevert[Random().nextInt(winningvideoUrlsTapiBlancDevert.length)]
                   : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDevert[Random().nextInt(winningvideoUrlsTapiBlancDevert.length)]
                   : loosingvideoUrlsTapiBlancDevert[Random().nextInt(loosingvideoUrlsTapiBlancDevert.length)]
                   )..initialize().then((_) {
@@ -964,12 +1046,12 @@ dynamicHelp1 (BuildContext context) {
                 // De rouge
                 if (icolorbg == 0){
                   //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDerouge[Random().nextInt(winningvideoUrlsGazonDerouge.length)]
                   : loosingvideoUrlsGazonDerouge[Random().nextInt(loosingvideoUrlsGazonDerouge.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDerouge[Random().nextInt(winningvideoUrlsGazonDerouge.length)]
                   : loosingvideoUrlsGazonDerouge[Random().nextInt(loosingvideoUrlsGazonDerouge.length)]
                   )..initialize().then((_) {
@@ -997,12 +1079,12 @@ dynamicHelp1 (BuildContext context) {
                 }
                 if (icolorbg == 1){
                   //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDerouge[Random().nextInt(winningvideoUrlsTapiMarronDerouge.length)]
                   : loosingvideoUrlsTapiMarronDerouge[Random().nextInt(loosingvideoUrlsTapiMarronDerouge.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDerouge[Random().nextInt(winningvideoUrlsTapiMarronDerouge.length)]
                   : loosingvideoUrlsTapiMarronDerouge[Random().nextInt(loosingvideoUrlsTapiMarronDerouge.length)]
                   )..initialize().then((_) {
@@ -1031,12 +1113,12 @@ dynamicHelp1 (BuildContext context) {
 
                 if (icolorbg == 2){
                   //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDerouge[Random().nextInt(winningvideoUrlsTapiBlancDerouge.length)]
                   : loosingvideoUrlsTapiBlancDerouge[Random().nextInt(loosingvideoUrlsTapiBlancDerouge.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDerouge[Random().nextInt(winningvideoUrlsTapiBlancDerouge.length)]
                   : loosingvideoUrlsTapiBlancDerouge[Random().nextInt(loosingvideoUrlsTapiBlancDerouge.length)]
                   )..initialize().then((_) {
@@ -1067,12 +1149,12 @@ dynamicHelp1 (BuildContext context) {
                 // De blanc
                 if (icolorbg == 0){
                   //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
                   : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
                   : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]
                   )..initialize().then((_) {
@@ -1100,12 +1182,12 @@ dynamicHelp1 (BuildContext context) {
                 }
                 if (icolorbg == 1){
                   //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDeblanc[Random().nextInt(winningvideoUrlsTapiMarronDeblanc.length)]
                   : loosingvideoUrlsTapiMarronDeblanc[Random().nextInt(loosingvideoUrlsTapiMarronDeblanc.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDeblanc[Random().nextInt(winningvideoUrlsTapiMarronDeblanc.length)]
                   : loosingvideoUrlsTapiMarronDeblanc[Random().nextInt(loosingvideoUrlsTapiMarronDeblanc.length)]
                   )..initialize().then((_) {
@@ -1133,12 +1215,12 @@ dynamicHelp1 (BuildContext context) {
                 }
                 if (icolorbg == 2){
                   //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDeblanc[Random().nextInt(winningvideoUrlsTapiBlancDeblanc.length)]
                   : loosingvideoUrlsTapiBlancDeblanc[Random().nextInt(loosingvideoUrlsTapiBlancDeblanc.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDeblanc[Random().nextInt(winningvideoUrlsTapiBlancDeblanc.length)]
                   : loosingvideoUrlsTapiBlancDeblanc[Random().nextInt(loosingvideoUrlsTapiBlancDeblanc.length)]
                   )..initialize().then((_) {
@@ -1169,12 +1251,12 @@ dynamicHelp1 (BuildContext context) {
                 // De noir
                 if (icolorbg == 0){
                   //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDenoir[Random().nextInt(winningvideoUrlsGazonDenoir.length)]
                   : loosingvideoUrlsGazonDenoir[Random().nextInt(loosingvideoUrlsGazonDenoir.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDenoir[Random().nextInt(winningvideoUrlsGazonDenoir.length)]
                   : loosingvideoUrlsGazonDenoir[Random().nextInt(loosingvideoUrlsGazonDenoir.length)]
                   )..initialize().then((_) {
@@ -1202,12 +1284,12 @@ dynamicHelp1 (BuildContext context) {
                 }
                 if (icolorbg == 1){
                   //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDenoir[Random().nextInt(winningvideoUrlsTapiMarronDenoir.length)]
                   : loosingvideoUrlsTapiMarronDenoir[Random().nextInt(loosingvideoUrlsTapiMarronDenoir.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDenoir[Random().nextInt(winningvideoUrlsTapiMarronDenoir.length)]
                   : loosingvideoUrlsTapiMarronDenoir[Random().nextInt(loosingvideoUrlsTapiMarronDenoir.length)]
                   )..initialize().then((_) {
@@ -1236,12 +1318,12 @@ dynamicHelp1 (BuildContext context) {
 
                 if (icolorbg == 2){
                   //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDenoir[Random().nextInt(winningvideoUrlsTapiBlancDenoir.length)]
                   : loosingvideoUrlsTapiBlancDenoir[Random().nextInt(loosingvideoUrlsTapiBlancDenoir.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDenoir[Random().nextInt(winningvideoUrlsTapiBlancDenoir.length)]
                   : loosingvideoUrlsTapiBlancDenoir[Random().nextInt(loosingvideoUrlsTapiBlancDenoir.length)]
                   )..initialize().then((_) {
@@ -1275,12 +1357,12 @@ dynamicHelp1 (BuildContext context) {
                 // De jaune
                 if (icolorbg == 0){
                   //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDejaune[Random().nextInt(winningvideoUrlsGazonDejaune.length)]
                   : loosingvideoUrlsGazonDejaune[Random().nextInt(loosingvideoUrlsGazonDejaune.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDejaune[Random().nextInt(winningvideoUrlsGazonDejaune.length)]
                   : loosingvideoUrlsGazonDejaune[Random().nextInt(loosingvideoUrlsGazonDejaune.length)]
                   )..initialize().then((_) {
@@ -1308,12 +1390,12 @@ dynamicHelp1 (BuildContext context) {
                 }
                 if (icolorbg == 1){
                   //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDejaune[Random().nextInt(winningvideoUrlsTapiMarronDejaune.length)]
                   : loosingvideoUrlsTapiMarronDejaune[Random().nextInt(loosingvideoUrlsTapiMarronDejaune.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiMarronDejaune[Random().nextInt(winningvideoUrlsTapiMarronDejaune.length)]
                   : loosingvideoUrlsTapiMarronDejaune[Random().nextInt(loosingvideoUrlsTapiMarronDejaune.length)]
                   )..initialize().then((_) {
@@ -1341,12 +1423,12 @@ dynamicHelp1 (BuildContext context) {
                 }
                 if (icolorbg == 2){
                   //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDejaune[Random().nextInt(winningvideoUrlsTapiBlancDejaune.length)]
                   : loosingvideoUrlsTapiBlancDejaune[Random().nextInt(loosingvideoUrlsTapiBlancDejaune.length)]);
 
                   _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19].contains(tentativeCourrante)
+                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsTapiBlancDejaune[Random().nextInt(winningvideoUrlsTapiBlancDejaune.length)]
                   : loosingvideoUrlsTapiBlancDejaune[Random().nextInt(loosingvideoUrlsTapiBlancDejaune.length)]
                   )..initialize().then((_) {
@@ -1460,7 +1542,7 @@ dynamicHelp1 (BuildContext context) {
           )
         : Stack(
               children: [
-                VideoPlayer(_controller),
+                VideoPlayer(_controllerInit),
                   Positioned(
                     // top: 0,
                     // right: 0,
