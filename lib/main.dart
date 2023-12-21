@@ -385,313 +385,6 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     'assets/videos/Somme12_tapi_blanc_dejaune.mp4'
   ];
 
-
-  List<String> winningvideoUrlsGazonDevertCopy = [
-    'assets/videos/Somme4_gazon_devert.mp4',
-    'assets/videos/Somme6_gazon_devert.mp4',
-    'assets/videos/Somme7_gazon_devert.mp4',
-    'assets/videos/Somme3_gazon_devert.mp4',
-    'assets/videos/Somme5_gazon_devert.mp4'
-  ];
-
-  List<String> loosingvideoUrlsGazonDevertCopy = [
-    'assets/videos/Somme2_gazon_devert.mp4',
-    'assets/videos/Somme8_gazon_devert.mp4',
-    'assets/videos/Somme9_gazon_devert.mp4',
-    'assets/videos/Somme11_gazon_devert.mp4',
-    'assets/videos/Somme10_gazon_devert.mp4',
-    'assets/videos/Somme12_gazon_devert.mp4'
-  ];
-
-  List<String> winningvideoUrlsGazonDebleuCopy = [
-    'assets/videos/Somme4_gazon_debleu.mp4',
-    'assets/videos/Somme6_gazon_debleu.mp4',
-    'assets/videos/Somme7_gazon_debleu.mp4',
-    'assets/videos/Somme3_gazon_debleu.mp4',
-    'assets/videos/Somme5_gazon_debleu.mp4'
-  ];
-
-  List<String> loosingvideoUrlsGazonDebleuCopy = [
-    'assets/videos/Somme2_gazon_debleu.mp4',
-    'assets/videos/Somme8_gazon_debleu.mp4',
-    'assets/videos/Somme9_gazon_debleu.mp4',
-    'assets/videos/Somme11_gazon_debleu.mp4',
-    'assets/videos/Somme10_gazon_debleu.mp4',
-    'assets/videos/Somme12_gazon_debleu.mp4'
-  ];
-
-  List<String> winningvideoUrlsGazonDerougeCopy = [
-    'assets/videos/Somme4_gazon_derouge.mp4',
-    'assets/videos/Somme6_gazon_derouge.mp4',
-    'assets/videos/Somme7_gazon_derouge.mp4',
-    'assets/videos/Somme3_gazon_derouge.mp4',
-    'assets/videos/Somme5_gazon_derouge.mp4'
-  ];
-
-  List<String> loosingvideoUrlsGazonDerougeCopy = [
-    'assets/videos/Somme2_gazon_derouge.mp4',
-    'assets/videos/Somme8_gazon_derouge.mp4',
-    'assets/videos/Somme9_gazon_derouge.mp4',
-    'assets/videos/Somme11_gazon_derouge.mp4',
-    'assets/videos/Somme10_gazon_derouge.mp4',
-    'assets/videos/Somme12_gazon_derouge.mp4'
-  ];
-
-  List<String> winningvideoUrlsGazonDeblancCopy = [
-    'assets/videos/Somme4_gazon_deblanc.mp4',
-    'assets/videos/Somme6_gazon_deblanc.mp4',
-    'assets/videos/Somme7_gazon_deblanc.mp4',
-    'assets/videos/Somme3_gazon_deblanc.mp4',
-    'assets/videos/Somme5_gazon_deblanc.mp4'
-  ];
-
-  List<String> loosingvideoUrlsGazonDeblancCopy = [
-    'assets/videos/Somme2_gazon_deblanc.mp4',
-    'assets/videos/Somme8_gazon_deblanc.mp4',
-    'assets/videos/Somme9_gazon_deblanc.mp4',
-    'assets/videos/Somme11_gazon_deblanc.mp4',
-    'assets/videos/Somme10_gazon_deblanc.mp4',
-    'assets/videos/Somme12_gazon_deblanc.mp4'
-  ];
-
-  List<String> winningvideoUrlsGazonDenoirCopy = [
-    'assets/videos/Somme4_gazon_denoir.mp4',
-    'assets/videos/Somme6_gazon_denoir.mp4',
-    'assets/videos/Somme7_gazon_denoir.mp4',
-    'assets/videos/Somme3_gazon_denoir.mp4',
-    'assets/videos/Somme5_gazon_denoir.mp4'
-  ];
-
-  List<String> loosingvideoUrlsGazonDenoirCopy = [
-    'assets/videos/Somme2_gazon_denoir.mp4',
-    'assets/videos/Somme8_gazon_denoir.mp4',
-    'assets/videos/Somme9_gazon_denoir.mp4',
-    'assets/videos/Somme11_gazon_denoir.mp4',
-    'assets/videos/Somme10_gazon_denoir.mp4',
-    'assets/videos/Somme12_gazon_denoir.mp4'
-  ];
-
-  List<String> winningvideoUrlsGazonDejauneCopy = [
-    'assets/videos/Somme4_gazon_dejaune.mp4',
-    'assets/videos/Somme6_gazon_dejaune.mp4',
-    'assets/videos/Somme7_gazon_dejaune.mp4',
-    'assets/videos/Somme3_gazon_dejaune.mp4',
-    'assets/videos/Somme5_gazon_dejaune.mp4'
-  ];
-
-  List<String> loosingvideoUrlsGazonDejauneCopy = [
-    'assets/videos/Somme2_gazon_dejaune.mp4',
-    'assets/videos/Somme8_gazon_dejaune.mp4',
-    'assets/videos/Somme9_gazon_dejaune.mp4',
-    'assets/videos/Somme11_gazon_dejaune.mp4',
-    'assets/videos/Somme10_gazon_dejaune.mp4',
-    'assets/videos/Somme12_gazon_dejaune.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiMarronDebleuCopy = [
-    'assets/videos/Somme4_tapi_marron_debleu.mp4',
-    'assets/videos/Somme6_tapi_marron_debleu.mp4',
-    'assets/videos/Somme7_tapi_marron_debleu.mp4',
-    'assets/videos/Somme3_tapi_marron_debleu.mp4',
-    'assets/videos/Somme5_tapi_marron_debleu.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiMarronDebleuCopy = [
-    'assets/videos/Somme2_tapi_marron_debleu.mp4',
-    'assets/videos/Somme8_tapi_marron_debleu.mp4',
-    'assets/videos/Somme9_tapi_marron_debleu.mp4',
-    'assets/videos/Somme11_tapi_marron_debleu.mp4',
-    'assets/videos/Somme10_tapi_marron_debleu.mp4',
-    'assets/videos/Somme12_tapi_marron_debleu.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiMarronDevertCopy = [
-    'assets/videos/Somme4_tapi_marron_devert.mp4',
-    'assets/videos/Somme6_tapi_marron_devert.mp4',
-    'assets/videos/Somme7_tapi_marron_devert.mp4',
-    'assets/videos/Somme3_tapi_marron_devert.mp4',
-    'assets/videos/Somme5_tapi_marron_devert.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiMarronDevertCopy = [
-    'assets/videos/Somme2_tapi_marron_devert.mp4',
-    'assets/videos/Somme8_tapi_marron_devert.mp4',
-    'assets/videos/Somme9_tapi_marron_devert.mp4',
-    'assets/videos/Somme11_tapi_marron_devert.mp4',
-    'assets/videos/Somme10_tapi_marron_devert.mp4',
-    'assets/videos/Somme12_tapi_marron_devert.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiMarronDerougeCopy = [
-    'assets/videos/Somme4_tapi_marron_derouge.mp4',
-    'assets/videos/Somme6_tapi_marron_derouge.mp4',
-    'assets/videos/Somme7_tapi_marron_derouge.mp4',
-    'assets/videos/Somme3_tapi_marron_derouge.mp4',
-    'assets/videos/Somme5_tapi_marron_derouge.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiMarronDerougeCopy = [
-    'assets/videos/Somme2_tapi_marron_derouge.mp4',
-    'assets/videos/Somme8_tapi_marron_derouge.mp4',
-    'assets/videos/Somme9_tapi_marron_derouge.mp4',
-    'assets/videos/Somme11_tapi_marron_derouge.mp4',
-    'assets/videos/Somme10_tapi_marron_derouge.mp4',
-    'assets/videos/Somme12_tapi_marron_derouge.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiMarronDeblancCopy = [
-    'assets/videos/Somme4_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme6_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme7_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme3_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme5_tapi_marron_deblanc.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiMarronDeblancCopy = [
-    'assets/videos/Somme2_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme8_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme9_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme11_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme10_tapi_marron_deblanc.mp4',
-    'assets/videos/Somme12_tapi_marron_deblanc.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiMarronDenoirCopy = [
-    'assets/videos/Somme4_tapi_marron_denoir.mp4',
-    'assets/videos/Somme6_tapi_marron_denoir.mp4',
-    'assets/videos/Somme7_tapi_marron_denoir.mp4',
-    'assets/videos/Somme3_tapi_marron_denoir.mp4',
-    'assets/videos/Somme5_tapi_marron_denoir.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiMarronDenoirCopy = [
-    'assets/videos/Somme2_tapi_marron_denoir.mp4',
-    'assets/videos/Somme8_tapi_marron_denoir.mp4',
-    'assets/videos/Somme9_tapi_marron_denoir.mp4',
-    'assets/videos/Somme11_tapi_marron_denoir.mp4',
-    'assets/videos/Somme10_tapi_marron_denoir.mp4',
-    'assets/videos/Somme12_tapi_marron_denoir.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiMarronDejauneCopy = [
-    'assets/videos/Somme4_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme6_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme7_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme3_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme5_tapi_marron_dejaune.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiMarronDejauneCopy = [
-    'assets/videos/Somme2_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme8_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme9_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme11_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme10_tapi_marron_dejaune.mp4',
-    'assets/videos/Somme12_tapi_marron_dejaune.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiBlancDebleuCopy = [
-    'assets/videos/Somme4_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme6_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme7_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme3_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme5_tapi_blanc_debleu.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiBlancDebleuCopy = [
-    'assets/videos/Somme2_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme8_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme9_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme11_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme10_tapi_blanc_debleu.mp4',
-    'assets/videos/Somme12_tapi_blanc_debleu.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiBlancDevertCopy = [
-    'assets/videos/Somme4_tapi_blanc_devert.mp4',
-    'assets/videos/Somme6_tapi_blanc_devert.mp4',
-    'assets/videos/Somme7_tapi_blanc_devert.mp4',
-    'assets/videos/Somme3_tapi_blanc_devert.mp4',
-    'assets/videos/Somme5_tapi_blanc_devert.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiBlancDevertCopy = [
-    'assets/videos/Somme2_tapi_blanc_devert.mp4',
-    'assets/videos/Somme8_tapi_blanc_devert.mp4',
-    'assets/videos/Somme9_tapi_blanc_devert.mp4',
-    'assets/videos/Somme11_tapi_blanc_devert.mp4',
-    'assets/videos/Somme10_tapi_blanc_devert.mp4',
-    'assets/videos/Somme12_tapi_blanc_devert.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiBlancDerougeCopy = [
-    'assets/videos/Somme4_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme6_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme7_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme3_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme5_tapi_blanc_derouge.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiBlancDerougeCopy = [
-    'assets/videos/Somme2_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme8_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme9_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme11_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme10_tapi_blanc_derouge.mp4',
-    'assets/videos/Somme12_tapi_blanc_derouge.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiBlancDeblancCopy = [
-    'assets/videos/Somme4_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme6_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme7_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme3_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme5_tapi_blanc_deblanc.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiBlancDeblancCopy = [
-    'assets/videos/Somme2_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme8_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme9_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme11_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme10_tapi_blanc_deblanc.mp4',
-    'assets/videos/Somme12_tapi_blanc_deblanc.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiBlancDenoirCopy = [
-    'assets/videos/Somme4_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme6_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme7_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme3_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme5_tapi_blanc_denoir.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiBlancDenoirCopy = [
-    'assets/videos/Somme2_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme8_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme9_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme11_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme10_tapi_blanc_denoir.mp4',
-    'assets/videos/Somme12_tapi_blanc_denoir.mp4'
-  ];
-
-  List<String> winningvideoUrlsTapiBlancDejauneCopy = [
-    'assets/videos/Somme4_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme6_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme7_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme3_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme5_tapi_blanc_dejaune.mp4'
-  ];
-
-  List<String> loosingvideoUrlsTapiBlancDejauneCopy = [
-    'assets/videos/Somme2_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme8_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme9_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme11_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme10_tapi_blanc_dejaune.mp4',
-    'assets/videos/Somme12_tapi_blanc_dejaune.mp4'
-  ];
-
   @override
   void initState() {
     super.initState();
@@ -1155,18 +848,421 @@ dynamicHelp1 (BuildContext context) {
         ? GestureDetector(
           behavior: HitTestBehavior.opaque,
             onTap: () async {
+              List<String> winningvideoUrlsGazonDevertCopy = [
+                'assets/videos/Somme4_gazon_devert.mp4',
+                'assets/videos/Somme6_gazon_devert.mp4',
+                'assets/videos/Somme7_gazon_devert.mp4',
+                'assets/videos/Somme3_gazon_devert.mp4',
+                'assets/videos/Somme5_gazon_devert.mp4'
+              ];
+
+              List<String> loosingvideoUrlsGazonDevertCopy = [
+                'assets/videos/Somme2_gazon_devert.mp4',
+                'assets/videos/Somme8_gazon_devert.mp4',
+                'assets/videos/Somme9_gazon_devert.mp4',
+                'assets/videos/Somme11_gazon_devert.mp4',
+                'assets/videos/Somme10_gazon_devert.mp4',
+                'assets/videos/Somme12_gazon_devert.mp4'
+              ];
+
+              List<String> winningvideoUrlsGazonDebleuCopy = [
+                'assets/videos/Somme4_gazon_debleu.mp4',
+                'assets/videos/Somme6_gazon_debleu.mp4',
+                'assets/videos/Somme7_gazon_debleu.mp4',
+                'assets/videos/Somme3_gazon_debleu.mp4',
+                'assets/videos/Somme5_gazon_debleu.mp4'
+              ];
+
+              List<String> loosingvideoUrlsGazonDebleuCopy = [
+                'assets/videos/Somme2_gazon_debleu.mp4',
+                'assets/videos/Somme8_gazon_debleu.mp4',
+                'assets/videos/Somme9_gazon_debleu.mp4',
+                'assets/videos/Somme11_gazon_debleu.mp4',
+                'assets/videos/Somme10_gazon_debleu.mp4',
+                'assets/videos/Somme12_gazon_debleu.mp4'
+              ];
+
+              List<String> winningvideoUrlsGazonDerougeCopy = [
+                'assets/videos/Somme4_gazon_derouge.mp4',
+                'assets/videos/Somme6_gazon_derouge.mp4',
+                'assets/videos/Somme7_gazon_derouge.mp4',
+                'assets/videos/Somme3_gazon_derouge.mp4',
+                'assets/videos/Somme5_gazon_derouge.mp4'
+              ];
+
+              List<String> loosingvideoUrlsGazonDerougeCopy = [
+                'assets/videos/Somme2_gazon_derouge.mp4',
+                'assets/videos/Somme8_gazon_derouge.mp4',
+                'assets/videos/Somme9_gazon_derouge.mp4',
+                'assets/videos/Somme11_gazon_derouge.mp4',
+                'assets/videos/Somme10_gazon_derouge.mp4',
+                'assets/videos/Somme12_gazon_derouge.mp4'
+              ];
+
+              List<String> winningvideoUrlsGazonDeblancCopy = [
+                'assets/videos/Somme4_gazon_deblanc.mp4',
+                'assets/videos/Somme6_gazon_deblanc.mp4',
+                'assets/videos/Somme7_gazon_deblanc.mp4',
+                'assets/videos/Somme3_gazon_deblanc.mp4',
+                'assets/videos/Somme5_gazon_deblanc.mp4'
+              ];
+
+              List<String> loosingvideoUrlsGazonDeblancCopy = [
+                'assets/videos/Somme2_gazon_deblanc.mp4',
+                'assets/videos/Somme8_gazon_deblanc.mp4',
+                'assets/videos/Somme9_gazon_deblanc.mp4',
+                'assets/videos/Somme11_gazon_deblanc.mp4',
+                'assets/videos/Somme10_gazon_deblanc.mp4',
+                'assets/videos/Somme12_gazon_deblanc.mp4'
+              ];
+
+              List<String> winningvideoUrlsGazonDenoirCopy = [
+                'assets/videos/Somme4_gazon_denoir.mp4',
+                'assets/videos/Somme6_gazon_denoir.mp4',
+                'assets/videos/Somme7_gazon_denoir.mp4',
+                'assets/videos/Somme3_gazon_denoir.mp4',
+                'assets/videos/Somme5_gazon_denoir.mp4'
+              ];
+
+              List<String> loosingvideoUrlsGazonDenoirCopy = [
+                'assets/videos/Somme2_gazon_denoir.mp4',
+                'assets/videos/Somme8_gazon_denoir.mp4',
+                'assets/videos/Somme9_gazon_denoir.mp4',
+                'assets/videos/Somme11_gazon_denoir.mp4',
+                'assets/videos/Somme10_gazon_denoir.mp4',
+                'assets/videos/Somme12_gazon_denoir.mp4'
+              ];
+
+              List<String> winningvideoUrlsGazonDejauneCopy = [
+                'assets/videos/Somme4_gazon_dejaune.mp4',
+                'assets/videos/Somme6_gazon_dejaune.mp4',
+                'assets/videos/Somme7_gazon_dejaune.mp4',
+                'assets/videos/Somme3_gazon_dejaune.mp4',
+                'assets/videos/Somme5_gazon_dejaune.mp4'
+              ];
+
+              List<String> loosingvideoUrlsGazonDejauneCopy = [
+                'assets/videos/Somme2_gazon_dejaune.mp4',
+                'assets/videos/Somme8_gazon_dejaune.mp4',
+                'assets/videos/Somme9_gazon_dejaune.mp4',
+                'assets/videos/Somme11_gazon_dejaune.mp4',
+                'assets/videos/Somme10_gazon_dejaune.mp4',
+                'assets/videos/Somme12_gazon_dejaune.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiMarronDebleuCopy = [
+                'assets/videos/Somme4_tapi_marron_debleu.mp4',
+                'assets/videos/Somme6_tapi_marron_debleu.mp4',
+                'assets/videos/Somme7_tapi_marron_debleu.mp4',
+                'assets/videos/Somme3_tapi_marron_debleu.mp4',
+                'assets/videos/Somme5_tapi_marron_debleu.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiMarronDebleuCopy = [
+                'assets/videos/Somme2_tapi_marron_debleu.mp4',
+                'assets/videos/Somme8_tapi_marron_debleu.mp4',
+                'assets/videos/Somme9_tapi_marron_debleu.mp4',
+                'assets/videos/Somme11_tapi_marron_debleu.mp4',
+                'assets/videos/Somme10_tapi_marron_debleu.mp4',
+                'assets/videos/Somme12_tapi_marron_debleu.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiMarronDevertCopy = [
+                'assets/videos/Somme4_tapi_marron_devert.mp4',
+                'assets/videos/Somme6_tapi_marron_devert.mp4',
+                'assets/videos/Somme7_tapi_marron_devert.mp4',
+                'assets/videos/Somme3_tapi_marron_devert.mp4',
+                'assets/videos/Somme5_tapi_marron_devert.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiMarronDevertCopy = [
+                'assets/videos/Somme2_tapi_marron_devert.mp4',
+                'assets/videos/Somme8_tapi_marron_devert.mp4',
+                'assets/videos/Somme9_tapi_marron_devert.mp4',
+                'assets/videos/Somme11_tapi_marron_devert.mp4',
+                'assets/videos/Somme10_tapi_marron_devert.mp4',
+                'assets/videos/Somme12_tapi_marron_devert.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiMarronDerougeCopy = [
+                'assets/videos/Somme4_tapi_marron_derouge.mp4',
+                'assets/videos/Somme6_tapi_marron_derouge.mp4',
+                'assets/videos/Somme7_tapi_marron_derouge.mp4',
+                'assets/videos/Somme3_tapi_marron_derouge.mp4',
+                'assets/videos/Somme5_tapi_marron_derouge.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiMarronDerougeCopy = [
+                'assets/videos/Somme2_tapi_marron_derouge.mp4',
+                'assets/videos/Somme8_tapi_marron_derouge.mp4',
+                'assets/videos/Somme9_tapi_marron_derouge.mp4',
+                'assets/videos/Somme11_tapi_marron_derouge.mp4',
+                'assets/videos/Somme10_tapi_marron_derouge.mp4',
+                'assets/videos/Somme12_tapi_marron_derouge.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiMarronDeblancCopy = [
+                'assets/videos/Somme4_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme6_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme7_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme3_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme5_tapi_marron_deblanc.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiMarronDeblancCopy = [
+                'assets/videos/Somme2_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme8_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme9_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme11_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme10_tapi_marron_deblanc.mp4',
+                'assets/videos/Somme12_tapi_marron_deblanc.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiMarronDenoirCopy = [
+                'assets/videos/Somme4_tapi_marron_denoir.mp4',
+                'assets/videos/Somme6_tapi_marron_denoir.mp4',
+                'assets/videos/Somme7_tapi_marron_denoir.mp4',
+                'assets/videos/Somme3_tapi_marron_denoir.mp4',
+                'assets/videos/Somme5_tapi_marron_denoir.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiMarronDenoirCopy = [
+                'assets/videos/Somme2_tapi_marron_denoir.mp4',
+                'assets/videos/Somme8_tapi_marron_denoir.mp4',
+                'assets/videos/Somme9_tapi_marron_denoir.mp4',
+                'assets/videos/Somme11_tapi_marron_denoir.mp4',
+                'assets/videos/Somme10_tapi_marron_denoir.mp4',
+                'assets/videos/Somme12_tapi_marron_denoir.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiMarronDejauneCopy = [
+                'assets/videos/Somme4_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme6_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme7_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme3_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme5_tapi_marron_dejaune.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiMarronDejauneCopy = [
+                'assets/videos/Somme2_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme8_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme9_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme11_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme10_tapi_marron_dejaune.mp4',
+                'assets/videos/Somme12_tapi_marron_dejaune.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiBlancDebleuCopy = [
+                'assets/videos/Somme4_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme6_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme7_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme3_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme5_tapi_blanc_debleu.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiBlancDebleuCopy = [
+                'assets/videos/Somme2_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme8_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme9_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme11_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme10_tapi_blanc_debleu.mp4',
+                'assets/videos/Somme12_tapi_blanc_debleu.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiBlancDevertCopy = [
+                'assets/videos/Somme4_tapi_blanc_devert.mp4',
+                'assets/videos/Somme6_tapi_blanc_devert.mp4',
+                'assets/videos/Somme7_tapi_blanc_devert.mp4',
+                'assets/videos/Somme3_tapi_blanc_devert.mp4',
+                'assets/videos/Somme5_tapi_blanc_devert.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiBlancDevertCopy = [
+                'assets/videos/Somme2_tapi_blanc_devert.mp4',
+                'assets/videos/Somme8_tapi_blanc_devert.mp4',
+                'assets/videos/Somme9_tapi_blanc_devert.mp4',
+                'assets/videos/Somme11_tapi_blanc_devert.mp4',
+                'assets/videos/Somme10_tapi_blanc_devert.mp4',
+                'assets/videos/Somme12_tapi_blanc_devert.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiBlancDerougeCopy = [
+                'assets/videos/Somme4_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme6_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme7_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme3_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme5_tapi_blanc_derouge.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiBlancDerougeCopy = [
+                'assets/videos/Somme2_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme8_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme9_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme11_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme10_tapi_blanc_derouge.mp4',
+                'assets/videos/Somme12_tapi_blanc_derouge.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiBlancDeblancCopy = [
+                'assets/videos/Somme4_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme6_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme7_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme3_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme5_tapi_blanc_deblanc.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiBlancDeblancCopy = [
+                'assets/videos/Somme2_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme8_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme9_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme11_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme10_tapi_blanc_deblanc.mp4',
+                'assets/videos/Somme12_tapi_blanc_deblanc.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiBlancDenoirCopy = [
+                'assets/videos/Somme4_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme6_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme7_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme3_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme5_tapi_blanc_denoir.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiBlancDenoirCopy = [
+                'assets/videos/Somme2_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme8_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme9_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme11_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme10_tapi_blanc_denoir.mp4',
+                'assets/videos/Somme12_tapi_blanc_denoir.mp4'
+              ];
+
+              List<String> winningvideoUrlsTapiBlancDejauneCopy = [
+                'assets/videos/Somme4_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme6_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme7_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme3_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme5_tapi_blanc_dejaune.mp4'
+              ];
+
+              List<String> loosingvideoUrlsTapiBlancDejauneCopy = [
+                'assets/videos/Somme2_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme8_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme9_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme11_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme10_tapi_blanc_dejaune.mp4',
+                'assets/videos/Somme12_tapi_blanc_dejaune.mp4'
+              ];
               setState(() {
                 if (tentativeCourrante > 22){
-                  print("+++++++++Reinitialisation a 1");
+                  print("+++++++++Reinitialisation Compteur");
                   tentativeCourrante = 1;
+                }
+                if (tentativeCourrante > 11){
+                  print("+++++++++Reinitialisation Liste");
                   nombreDeFoisEstApparu4 = 0;
                   nombreDeFoisEstApparu5 = 0;
                   nombreDeFoisEstApparu9 = 0;
                   nombreDeFoisEstApparu10 = 0;
                   winningvideoUrlsGazonDevert = winningvideoUrlsGazonDevertCopy;
                   loosingvideoUrlsGazonDevert = loosingvideoUrlsGazonDevertCopy;
-                  winningvideoUrlsGazonDebleu = winningvideoUrlsGazonDebleuCopy;
-                  loosingvideoUrlsGazonDebleu = loosingvideoUrlsGazonDebleuCopy;
+                  // winningvideoUrlsGazonDebleu = winningvideoUrlsGazonDebleuCopy;
+                  // loosingvideoUrlsGazonDebleu = loosingvideoUrlsGazonDebleuCopy;
+                  String jumelesGagn = "";
+                  for (String video in winningvideoUrlsGazonDebleu){
+                    jumelesGagn += video;
+                  }
+                  print("***jumelesGagn---");
+                  print(jumelesGagn);
+                  if (!jumelesGagn.contains("Somme4")){
+                    if (quatreNumero == 0){
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"4"+"_gazon_debleu.mp4");
+                    }
+                    else{
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"4"+"_gazon_debleu_1.mp4");
+                    }
+                  }
+                  if (!jumelesGagn.contains("Somme6")){
+                    if (sixNumero == 0){
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu.mp4");
+                    }
+                    if (sixNumero == 1){
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu_1.mp4");
+                    }
+                    if (sixNumero > 2){
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu_2.mp4");
+                    }
+                  }
+                  if (!jumelesGagn.contains("Somme7")){
+                    if (septNumero == 0){
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"7"+"_gazon_debleu.mp4");
+                    }
+                    else{
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"7"+"_gazon_debleu_1.mp4");
+                    }
+                  }
+                  if (!jumelesGagn.contains("Somme3")){
+                    winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"3"+"_gazon_debleu.mp4");
+                  }
+                  if (!jumelesGagn.contains("Somme5")){
+                    if (cinqNumero == 0){
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"5"+"_gazon_debleu.mp4");
+                    }
+                    else{
+                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"5"+"_gazon_debleu_1.mp4");
+                    }
+                  }
+
+
+                  
+                  String jumeles = "";
+                  for (String video in loosingvideoUrlsGazonDebleu){
+                    jumeles += video;
+                  }
+                  print("***Jumles");
+                  print(jumeles);
+                  if (!jumeles.contains("Somme2")){
+                    print("Tout les sommes 2 absents");
+                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"2"+"_gazon_debleu.mp4");
+                  }
+                  if (!jumeles.contains("Somme8")){
+                    print("Tout les sommes 8 absents");
+                    if (huitNumero == 0){
+                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu.mp4");
+                    }
+                    if (huitNumero == 1){
+                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu_1.mp4");
+                    }
+                    if (huitNumero > 2){
+                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu_2.mp4");
+                    }
+                  }
+                  if (!jumeles.contains("Somme9")){
+                    print("Tout les sommes 9 absents");
+                    if (neufNumero == 0){
+                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"9"+"_gazon_debleu.mp4");
+                    }
+                    if (neufNumero > 1){
+                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"9"+"_gazon_debleu_1.mp4");
+                    }
+                  }
+                  if (!jumeles.contains("Somme11")){
+                    print("Tout les sommes 11 absents");
+                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"11"+"_gazon_debleu.mp4");
+                  }
+                  if (!jumeles.contains("Somme10")){
+                    print("Tout les sommes 10 absents");
+                    if (dixNumero == 0){
+                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"10"+"_gazon_debleu.mp4");
+                    }
+                    if (dixNumero > 1){
+                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"10"+"_gazon_debleu_1.mp4");
+                    }
+                  }
+                  if (!jumeles.contains("Somme12")){
+                    print("Tout les sommes 12 absents");
+                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"12"+"_gazon_debleu.mp4");
+                  }
                   winningvideoUrlsGazonDerouge = winningvideoUrlsGazonDerougeCopy;
                   loosingvideoUrlsGazonDerouge = loosingvideoUrlsGazonDerougeCopy;
                   winningvideoUrlsGazonDeblanc = winningvideoUrlsGazonDeblancCopy;
@@ -1215,12 +1311,12 @@ dynamicHelp1 (BuildContext context) {
                   //  + Gazon vert
                     print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
-                  : loosingvideoUrlsGazonDebleu[Random().nextInt(loosingvideoUrlsGazonDebleu.length)]);
+                  : loosingvideoUrlsGazonDebleu[0]);
 
                   _controller = VideoPlayerController.asset(
                   [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
                   ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
-                  : loosingvideoUrlsGazonDebleu[Random().nextInt(loosingvideoUrlsGazonDebleu.length)]
+                  : loosingvideoUrlsGazonDebleu[0]
                   )..initialize().then((_) {
                     setState(() {
                       print("+++++++++++Numbre de lance");
@@ -1321,6 +1417,7 @@ dynamicHelp1 (BuildContext context) {
                           if (quatreNumero == 0){
                               setState(() {
                                 winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                                 winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                               });
                           }
@@ -1328,6 +1425,7 @@ dynamicHelp1 (BuildContext context) {
                           if (quatreNumero > 1){
                               quatreNumero = 0;
                               winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                               winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                             }else{
                               quatreNumero += 1;
@@ -1386,6 +1484,7 @@ dynamicHelp1 (BuildContext context) {
                           if (cinqNumero == 0){
                               setState(() {
                                 winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                                 winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                               });
                           }
@@ -1393,6 +1492,7 @@ dynamicHelp1 (BuildContext context) {
                           if (cinqNumero > 1){
                               cinqNumero = 0;
                               winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                               winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                             }else{
                               cinqNumero += 1;
@@ -1452,6 +1552,7 @@ dynamicHelp1 (BuildContext context) {
                           if (neufNumero == 0){
                               setState(() {
                                 loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                                 loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                               });
                           }
@@ -1459,6 +1560,7 @@ dynamicHelp1 (BuildContext context) {
                             if (neufNumero > 1){
                                 neufNumero = 0;
                                 loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                                 loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                               }
                             else{
@@ -1518,6 +1620,7 @@ dynamicHelp1 (BuildContext context) {
                           if (dixNumero == 0){
                               setState(() {
                                 loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                                 loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                               });
                           }
@@ -1526,6 +1629,7 @@ dynamicHelp1 (BuildContext context) {
                           if (dixNumero > 1){
                                 dixNumero = 0;
                                 loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                                 loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                               }else{
                                 dixNumero += 1;
@@ -1536,31 +1640,82 @@ dynamicHelp1 (BuildContext context) {
                     }
 
                     if (somme == "8"){
-                      print("----Numero");
-                      print(huitNumero);
-                      if (huitNumero == 0){
+                      setState((){
+                        nombreDeFoisEstApparu8 += 1;
+                        if (nombreDeFoisEstApparu8 >= 3){
+                          print("supression de la somme 8");
                           setState(() {
+                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                             loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
                           });
-                      }
-
-                      if (huitNumero == 1){
-                        print("deuxieme tout pour 8");
-                        setState(() {
-                          loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                        });
-                      }
-                      setState(() {
-                        
-                        if (huitNumero > 2){
-                          huitNumero = 0;
-                          loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                          loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                         }else{
-                          huitNumero += 1;
+                          print("----Numero");
+                          print(huitNumero);
+                          if (huitNumero == 0){
+                              setState(() {
+                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                                  loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                              });
+                          }
+
+                          if (huitNumero == 1){
+                            print("deuxieme tour pour 8");
+                            // setState(() {
+                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                              loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                          }
+                          setState(() {
+                            
+                            if (huitNumero > 2){
+                              huitNumero = 0;
+                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                              loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                            }else{
+                              huitNumero += 1;
+                            }
+                          });
                         }
                       });
                     }
@@ -1571,6 +1726,8 @@ dynamicHelp1 (BuildContext context) {
                       if (sixNumero == 0){
                           setState(() {
                             winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
                             winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                           });
                       }
@@ -1579,6 +1736,8 @@ dynamicHelp1 (BuildContext context) {
                         print("deuxieme tour pour 6");
                         setState(() {
                           winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                           winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
                         });
                       }
@@ -1588,6 +1747,7 @@ dynamicHelp1 (BuildContext context) {
                           sixNumero = 0;
                           winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                           winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                           winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                         }else{
                           sixNumero += 1;
@@ -1601,6 +1761,7 @@ dynamicHelp1 (BuildContext context) {
                       if (septNumero == 0){
                           setState(() {
                             winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                             winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
                           });
                       }
@@ -1608,6 +1769,7 @@ dynamicHelp1 (BuildContext context) {
                         if (septNumero > 1){
                             septNumero = 0;
                             winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                             winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
                         }else{
                           septNumero += 1;
@@ -1615,6 +1777,18 @@ dynamicHelp1 (BuildContext context) {
                       });
                     }
                     print("Maintenant");
+                    if (winningvideoUrlsGazonDebleu.isEmpty){
+                      setState(() {
+                        print("---------------REMISE en place Gagnants-------------------");
+                        winningvideoUrlsGazonDebleu = winningvideoUrlsGazonDebleuCopy;
+                        });
+                    }
+                    if (loosingvideoUrlsGazonDebleu.isEmpty){
+                      setState(() {
+                        print("---------------REMISE en place Perdants-------------------");
+                        loosingvideoUrlsGazonDebleu = loosingvideoUrlsGazonDebleuCopy;
+                        });
+                    }
                     print(winningvideoUrlsGazonDebleu);
                     print(loosingvideoUrlsGazonDebleu);
                     _controller.setVolume(0);
