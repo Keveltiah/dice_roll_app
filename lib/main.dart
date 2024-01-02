@@ -6,6 +6,8 @@ import 'dart:math';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:flutter_ffmpeg/flutter_ffmpeg.dart';
+import 'package:shake/shake.dart';
+import 'package:sensors/sensors.dart';
 
 void main() {
   runApp(MyApp());
@@ -388,7 +390,14 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
   @override
   void initState() {
     super.initState();
-    final  customDate = "2023-12-30 00:00:00";
+    // ShakeDetector.autoStart(onPhoneShake: () {
+    //   // Perform actions when a phone shake is detected
+    //     handleEvent();
+    //   },
+    //   shakeThresholdGravity: 2.4,
+    //   // shakeSlopTimeMS: 1
+    // );
+    final  customDate = "2024-01-10 00:00:00";
     final parsed = DateTime.parse(customDate);
     final maDate = DateTime.now();
     print("Result");
@@ -842,5585 +851,5589 @@ dynamicHelp1 (BuildContext context) {
 //       _controller.play();
 //     });
 //   }
+
+ void handleEvent(){
+  List<String> winningvideoUrlsGazonDevertCopy = [
+    'assets/videos/Somme4_gazon_devert.mp4',
+    'assets/videos/Somme6_gazon_devert.mp4',
+    'assets/videos/Somme7_gazon_devert.mp4',
+    'assets/videos/Somme3_gazon_devert.mp4',
+    'assets/videos/Somme5_gazon_devert.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDevertCopy = [
+    'assets/videos/Somme2_gazon_devert.mp4',
+    'assets/videos/Somme8_gazon_devert.mp4',
+    'assets/videos/Somme9_gazon_devert.mp4',
+    'assets/videos/Somme11_gazon_devert.mp4',
+    'assets/videos/Somme10_gazon_devert.mp4',
+    'assets/videos/Somme12_gazon_devert.mp4'
+  ];
+
+  List<String> winningvideoUrlsGazonDebleuCopy = [
+    'assets/videos/Somme4_gazon_debleu.mp4',
+    'assets/videos/Somme6_gazon_debleu.mp4',
+    'assets/videos/Somme7_gazon_debleu.mp4',
+    'assets/videos/Somme3_gazon_debleu.mp4',
+    'assets/videos/Somme5_gazon_debleu.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDebleuCopy = [
+    'assets/videos/Somme2_gazon_debleu.mp4',
+    'assets/videos/Somme8_gazon_debleu.mp4',
+    'assets/videos/Somme9_gazon_debleu.mp4',
+    'assets/videos/Somme11_gazon_debleu.mp4',
+    'assets/videos/Somme10_gazon_debleu.mp4',
+    'assets/videos/Somme12_gazon_debleu.mp4'
+  ];
+
+  List<String> winningvideoUrlsGazonDerougeCopy = [
+    'assets/videos/Somme4_gazon_derouge.mp4',
+    'assets/videos/Somme6_gazon_derouge.mp4',
+    'assets/videos/Somme7_gazon_derouge.mp4',
+    'assets/videos/Somme3_gazon_derouge.mp4',
+    'assets/videos/Somme5_gazon_derouge.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDerougeCopy = [
+    'assets/videos/Somme2_gazon_derouge.mp4',
+    'assets/videos/Somme8_gazon_derouge.mp4',
+    'assets/videos/Somme9_gazon_derouge.mp4',
+    'assets/videos/Somme11_gazon_derouge.mp4',
+    'assets/videos/Somme10_gazon_derouge.mp4',
+    'assets/videos/Somme12_gazon_derouge.mp4'
+  ];
+
+  List<String> winningvideoUrlsGazonDeblancCopy = [
+    'assets/videos/Somme4_gazon_deblanc.mp4',
+    'assets/videos/Somme6_gazon_deblanc.mp4',
+    'assets/videos/Somme7_gazon_deblanc.mp4',
+    'assets/videos/Somme3_gazon_deblanc.mp4',
+    'assets/videos/Somme5_gazon_deblanc.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDeblancCopy = [
+    'assets/videos/Somme2_gazon_deblanc.mp4',
+    'assets/videos/Somme8_gazon_deblanc.mp4',
+    'assets/videos/Somme9_gazon_deblanc.mp4',
+    'assets/videos/Somme11_gazon_deblanc.mp4',
+    'assets/videos/Somme10_gazon_deblanc.mp4',
+    'assets/videos/Somme12_gazon_deblanc.mp4'
+  ];
+
+  List<String> winningvideoUrlsGazonDenoirCopy = [
+    'assets/videos/Somme4_gazon_denoir.mp4',
+    'assets/videos/Somme6_gazon_denoir.mp4',
+    'assets/videos/Somme7_gazon_denoir.mp4',
+    'assets/videos/Somme3_gazon_denoir.mp4',
+    'assets/videos/Somme5_gazon_denoir.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDenoirCopy = [
+    'assets/videos/Somme2_gazon_denoir.mp4',
+    'assets/videos/Somme8_gazon_denoir.mp4',
+    'assets/videos/Somme9_gazon_denoir.mp4',
+    'assets/videos/Somme11_gazon_denoir.mp4',
+    'assets/videos/Somme10_gazon_denoir.mp4',
+    'assets/videos/Somme12_gazon_denoir.mp4'
+  ];
+
+  List<String> winningvideoUrlsGazonDejauneCopy = [
+    'assets/videos/Somme4_gazon_dejaune.mp4',
+    'assets/videos/Somme6_gazon_dejaune.mp4',
+    'assets/videos/Somme7_gazon_dejaune.mp4',
+    'assets/videos/Somme3_gazon_dejaune.mp4',
+    'assets/videos/Somme5_gazon_dejaune.mp4'
+  ];
+
+  List<String> loosingvideoUrlsGazonDejauneCopy = [
+    'assets/videos/Somme2_gazon_dejaune.mp4',
+    'assets/videos/Somme8_gazon_dejaune.mp4',
+    'assets/videos/Somme9_gazon_dejaune.mp4',
+    'assets/videos/Somme11_gazon_dejaune.mp4',
+    'assets/videos/Somme10_gazon_dejaune.mp4',
+    'assets/videos/Somme12_gazon_dejaune.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiMarronDebleuCopy = [
+    'assets/videos/Somme4_tapi_marron_debleu.mp4',
+    'assets/videos/Somme6_tapi_marron_debleu.mp4',
+    'assets/videos/Somme7_tapi_marron_debleu.mp4',
+    'assets/videos/Somme3_tapi_marron_debleu.mp4',
+    'assets/videos/Somme5_tapi_marron_debleu.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiMarronDebleuCopy = [
+    'assets/videos/Somme2_tapi_marron_debleu.mp4',
+    'assets/videos/Somme8_tapi_marron_debleu.mp4',
+    'assets/videos/Somme9_tapi_marron_debleu.mp4',
+    'assets/videos/Somme11_tapi_marron_debleu.mp4',
+    'assets/videos/Somme10_tapi_marron_debleu.mp4',
+    'assets/videos/Somme12_tapi_marron_debleu.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiMarronDevertCopy = [
+    'assets/videos/Somme4_tapi_marron_devert.mp4',
+    'assets/videos/Somme6_tapi_marron_devert.mp4',
+    'assets/videos/Somme7_tapi_marron_devert.mp4',
+    'assets/videos/Somme3_tapi_marron_devert.mp4',
+    'assets/videos/Somme5_tapi_marron_devert.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiMarronDevertCopy = [
+    'assets/videos/Somme2_tapi_marron_devert.mp4',
+    'assets/videos/Somme8_tapi_marron_devert.mp4',
+    'assets/videos/Somme9_tapi_marron_devert.mp4',
+    'assets/videos/Somme11_tapi_marron_devert.mp4',
+    'assets/videos/Somme10_tapi_marron_devert.mp4',
+    'assets/videos/Somme12_tapi_marron_devert.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiMarronDerougeCopy = [
+    'assets/videos/Somme4_tapi_marron_derouge.mp4',
+    'assets/videos/Somme6_tapi_marron_derouge.mp4',
+    'assets/videos/Somme7_tapi_marron_derouge.mp4',
+    'assets/videos/Somme3_tapi_marron_derouge.mp4',
+    'assets/videos/Somme5_tapi_marron_derouge.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiMarronDerougeCopy = [
+    'assets/videos/Somme2_tapi_marron_derouge.mp4',
+    'assets/videos/Somme8_tapi_marron_derouge.mp4',
+    'assets/videos/Somme9_tapi_marron_derouge.mp4',
+    'assets/videos/Somme11_tapi_marron_derouge.mp4',
+    'assets/videos/Somme10_tapi_marron_derouge.mp4',
+    'assets/videos/Somme12_tapi_marron_derouge.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiMarronDeblancCopy = [
+    'assets/videos/Somme4_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme6_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme7_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme3_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme5_tapi_marron_deblanc.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiMarronDeblancCopy = [
+    'assets/videos/Somme2_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme8_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme9_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme11_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme10_tapi_marron_deblanc.mp4',
+    'assets/videos/Somme12_tapi_marron_deblanc.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiMarronDenoirCopy = [
+    'assets/videos/Somme4_tapi_marron_denoir.mp4',
+    'assets/videos/Somme6_tapi_marron_denoir.mp4',
+    'assets/videos/Somme7_tapi_marron_denoir.mp4',
+    'assets/videos/Somme3_tapi_marron_denoir.mp4',
+    'assets/videos/Somme5_tapi_marron_denoir.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiMarronDenoirCopy = [
+    'assets/videos/Somme2_tapi_marron_denoir.mp4',
+    'assets/videos/Somme8_tapi_marron_denoir.mp4',
+    'assets/videos/Somme9_tapi_marron_denoir.mp4',
+    'assets/videos/Somme11_tapi_marron_denoir.mp4',
+    'assets/videos/Somme10_tapi_marron_denoir.mp4',
+    'assets/videos/Somme12_tapi_marron_denoir.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiMarronDejauneCopy = [
+    'assets/videos/Somme4_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme6_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme7_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme3_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme5_tapi_marron_dejaune.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiMarronDejauneCopy = [
+    'assets/videos/Somme2_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme8_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme9_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme11_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme10_tapi_marron_dejaune.mp4',
+    'assets/videos/Somme12_tapi_marron_dejaune.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDebleuCopy = [
+    'assets/videos/Somme4_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme6_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme7_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme3_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme5_tapi_blanc_debleu.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDebleuCopy = [
+    'assets/videos/Somme2_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme8_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme9_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme11_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme10_tapi_blanc_debleu.mp4',
+    'assets/videos/Somme12_tapi_blanc_debleu.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDevertCopy = [
+    'assets/videos/Somme4_tapi_blanc_devert.mp4',
+    'assets/videos/Somme6_tapi_blanc_devert.mp4',
+    'assets/videos/Somme7_tapi_blanc_devert.mp4',
+    'assets/videos/Somme3_tapi_blanc_devert.mp4',
+    'assets/videos/Somme5_tapi_blanc_devert.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDevertCopy = [
+    'assets/videos/Somme2_tapi_blanc_devert.mp4',
+    'assets/videos/Somme8_tapi_blanc_devert.mp4',
+    'assets/videos/Somme9_tapi_blanc_devert.mp4',
+    'assets/videos/Somme11_tapi_blanc_devert.mp4',
+    'assets/videos/Somme10_tapi_blanc_devert.mp4',
+    'assets/videos/Somme12_tapi_blanc_devert.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDerougeCopy = [
+    'assets/videos/Somme4_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme6_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme7_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme3_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme5_tapi_blanc_derouge.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDerougeCopy = [
+    'assets/videos/Somme2_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme8_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme9_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme11_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme10_tapi_blanc_derouge.mp4',
+    'assets/videos/Somme12_tapi_blanc_derouge.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDeblancCopy = [
+    'assets/videos/Somme4_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme6_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme7_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme3_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme5_tapi_blanc_deblanc.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDeblancCopy = [
+    'assets/videos/Somme2_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme8_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme9_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme11_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme10_tapi_blanc_deblanc.mp4',
+    'assets/videos/Somme12_tapi_blanc_deblanc.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDenoirCopy = [
+    'assets/videos/Somme4_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme6_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme7_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme3_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme5_tapi_blanc_denoir.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDenoirCopy = [
+    'assets/videos/Somme2_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme8_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme9_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme11_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme10_tapi_blanc_denoir.mp4',
+    'assets/videos/Somme12_tapi_blanc_denoir.mp4'
+  ];
+
+  List<String> winningvideoUrlsTapiBlancDejauneCopy = [
+    'assets/videos/Somme4_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme6_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme7_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme3_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme5_tapi_blanc_dejaune.mp4'
+  ];
+
+  List<String> loosingvideoUrlsTapiBlancDejauneCopy = [
+    'assets/videos/Somme2_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme8_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme9_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme11_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme10_tapi_blanc_dejaune.mp4',
+    'assets/videos/Somme12_tapi_blanc_dejaune.mp4'
+  ];
+  setState(() {
+    if (tentativeCourrante > 72){
+      print("+++++++++Reinitialisation Compteur");
+      tentativeCourrante = 1;
+    }
+    if (tentativeCourrante > 11){
+      print("+++++++++Reinitialisation Liste");
+      nombreDeFoisEstApparu4 = 0;
+      nombreDeFoisEstApparu5 = 0;
+      nombreDeFoisEstApparu9 = 0;
+      nombreDeFoisEstApparu10 = 0;
+      winningvideoUrlsGazonDevert = winningvideoUrlsGazonDevertCopy;
+      loosingvideoUrlsGazonDevert = loosingvideoUrlsGazonDevertCopy;
+      // winningvideoUrlsGazonDebleu = winningvideoUrlsGazonDebleuCopy;
+      // loosingvideoUrlsGazonDebleu = loosingvideoUrlsGazonDebleuCopy;
+      String jumelesGagn = "";
+      for (String video in winningvideoUrlsGazonDebleu){
+        jumelesGagn += video;
+      }
+      print("***jumelesGagn---");
+      print(jumelesGagn);
+      if (!jumelesGagn.contains("Somme4")){
+        if (quatreNumero == 0){
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"4"+"_gazon_debleu.mp4");
+        }
+        else{
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"4"+"_gazon_debleu_1.mp4");
+        }
+      }
+      if (!jumelesGagn.contains("Somme6")){
+        if (sixNumero == 0){
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu.mp4");
+        }
+        if (sixNumero == 1){
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu_1.mp4");
+        }
+        if (sixNumero > 2){
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu_2.mp4");
+        }
+      }
+      if (!jumelesGagn.contains("Somme7")){
+        if (septNumero == 0){
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"7"+"_gazon_debleu.mp4");
+        }
+        else{
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"7"+"_gazon_debleu_1.mp4");
+        }
+      }
+      if (!jumelesGagn.contains("Somme3")){
+        winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"3"+"_gazon_debleu.mp4");
+      }
+      if (!jumelesGagn.contains("Somme5")){
+        if (cinqNumero == 0){
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"5"+"_gazon_debleu.mp4");
+        }
+        else{
+          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"5"+"_gazon_debleu_1.mp4");
+        }
+      }
+
+
+      
+      String jumeles = "";
+      for (String video in loosingvideoUrlsGazonDebleu){
+        jumeles += video;
+      }
+      print("***Jumles");
+      print(jumeles);
+      if (!jumeles.contains("Somme2")){
+        print("Tout les sommes 2 absents");
+        loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"2"+"_gazon_debleu.mp4");
+      }
+      if (!jumeles.contains("Somme8")){
+        print("Tout les sommes 8 absents");
+        if (huitNumero == 0){
+          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu.mp4");
+        }
+        if (huitNumero == 1){
+          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu_1.mp4");
+        }
+        if (huitNumero > 2){
+          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu_2.mp4");
+        }
+      }
+      if (!jumeles.contains("Somme9")){
+        print("Tout les sommes 9 absents");
+        if (neufNumero == 0){
+          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"9"+"_gazon_debleu.mp4");
+        }
+        if (neufNumero > 1){
+          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"9"+"_gazon_debleu_1.mp4");
+        }
+      }
+      if (!jumeles.contains("Somme11")){
+        print("Tout les sommes 11 absents");
+        loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"11"+"_gazon_debleu.mp4");
+      }
+      if (!jumeles.contains("Somme10")){
+        print("Tout les sommes 10 absents");
+        if (dixNumero == 0){
+          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"10"+"_gazon_debleu.mp4");
+        }
+        if (dixNumero > 1){
+          loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"10"+"_gazon_debleu_1.mp4");
+        }
+      }
+      if (!jumeles.contains("Somme12")){
+        print("Tout les sommes 12 absents");
+        loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"12"+"_gazon_debleu.mp4");
+      }
+      winningvideoUrlsGazonDerouge = winningvideoUrlsGazonDerougeCopy;
+      loosingvideoUrlsGazonDerouge = loosingvideoUrlsGazonDerougeCopy;
+      winningvideoUrlsGazonDeblanc = winningvideoUrlsGazonDeblancCopy;
+      loosingvideoUrlsGazonDeblanc = loosingvideoUrlsGazonDeblancCopy;
+      winningvideoUrlsGazonDenoir = winningvideoUrlsGazonDenoirCopy;
+      loosingvideoUrlsGazonDenoir = loosingvideoUrlsGazonDenoirCopy;
+      winningvideoUrlsGazonDejaune = winningvideoUrlsGazonDejauneCopy;
+      loosingvideoUrlsGazonDejaune = loosingvideoUrlsGazonDejauneCopy;
+      winningvideoUrlsTapiMarronDebleu = winningvideoUrlsTapiMarronDebleuCopy;
+      loosingvideoUrlsTapiMarronDebleu = loosingvideoUrlsTapiMarronDebleuCopy;
+      winningvideoUrlsTapiMarronDevert = winningvideoUrlsTapiMarronDevertCopy;
+      loosingvideoUrlsTapiMarronDevert = loosingvideoUrlsTapiMarronDevertCopy;
+      winningvideoUrlsTapiMarronDerouge = winningvideoUrlsTapiMarronDerougeCopy;
+      loosingvideoUrlsTapiMarronDerouge = loosingvideoUrlsTapiMarronDerougeCopy;
+      winningvideoUrlsTapiMarronDeblanc = winningvideoUrlsTapiMarronDeblancCopy;
+      loosingvideoUrlsTapiMarronDeblanc = loosingvideoUrlsTapiMarronDeblancCopy;
+      winningvideoUrlsTapiMarronDenoir = winningvideoUrlsTapiMarronDenoirCopy;
+      loosingvideoUrlsTapiMarronDenoir = loosingvideoUrlsTapiMarronDenoirCopy;
+      winningvideoUrlsTapiMarronDejaune = winningvideoUrlsTapiMarronDejauneCopy;
+      loosingvideoUrlsTapiMarronDejaune = loosingvideoUrlsTapiMarronDejauneCopy;
+      winningvideoUrlsTapiBlancDebleu = winningvideoUrlsTapiBlancDebleuCopy;
+      loosingvideoUrlsTapiBlancDebleu = loosingvideoUrlsTapiBlancDebleuCopy;
+      winningvideoUrlsTapiBlancDevert = winningvideoUrlsTapiBlancDevertCopy;
+      loosingvideoUrlsTapiBlancDevert = loosingvideoUrlsTapiBlancDevertCopy;
+      winningvideoUrlsTapiBlancDerouge = winningvideoUrlsTapiBlancDerougeCopy;
+      loosingvideoUrlsTapiBlancDerouge = loosingvideoUrlsTapiBlancDerougeCopy;
+      winningvideoUrlsTapiBlancDeblanc = winningvideoUrlsTapiBlancDeblancCopy;
+      loosingvideoUrlsTapiBlancDeblanc = loosingvideoUrlsTapiBlancDeblancCopy;
+      winningvideoUrlsTapiBlancDenoir = winningvideoUrlsTapiBlancDenoirCopy;
+      loosingvideoUrlsTapiBlancDenoir = loosingvideoUrlsTapiBlancDenoirCopy;
+      winningvideoUrlsTapiBlancDejaune = winningvideoUrlsTapiBlancDejauneCopy;
+      loosingvideoUrlsTapiBlancDejaune = loosingvideoUrlsTapiBlancDejauneCopy;
+    }
+  });
+  if([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)){
+    print('OKOKOKOKO');
+  }
+  _controller.dispose();
+  print("couleur du de");
+  print(icolor);
+  print("couleur background");
+  print(icolorbg);
+  if (icolor == 0){
+    // De bleu
+    if (icolorbg == 0){
+      //  + Gazon vert
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
+      : loosingvideoUrlsGazonDebleu[0]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
+      : loosingvideoUrlsGazonDebleu[0]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }else{
+              print("Quatre");
+              print(quatreNumero);
+              if (quatreNumero == 0){
+                  setState(() {
+                    winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                    winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                    winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  });
+              }
+              setState(() {
+              if (quatreNumero > 1){
+                  quatreNumero = 0;
+                  winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                  winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                }else{
+                  quatreNumero += 1;
+                }
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }else{
+              print("Cinq");
+              print(cinqNumero);
+              if (cinqNumero == 0){
+                  setState(() {
+                    winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                    winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                    winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  });
+              }
+              setState(() {
+              if (cinqNumero > 1){
+                  cinqNumero = 0;
+                  winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                  winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                }else{
+                  cinqNumero += 1;
+                }
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+            else{
+              print(neufNumero);
+              if (neufNumero == 0){
+                  setState(() {
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  });
+              }
+              setState(() {
+                if (neufNumero > 1){
+                    neufNumero = 0;
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                  }
+                else{
+                  neufNumero += 1;
+                }
+                });
+              }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }else{
+              print(dixNumero);
+              if (dixNumero == 0){
+                  setState(() {
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  });
+              }
+              setState(() {
+                
+              if (dixNumero > 1){
+                    dixNumero = 0;
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                  }else{
+                    dixNumero += 1;
+                  }
+                });
+              }
+          });
+        }
+
+        if (somme == "8"){
+          setState((){
+            nombreDeFoisEstApparu8 += 1;
+            if (nombreDeFoisEstApparu8 >= 3){
+              print("supression de la somme 8");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }else{
+              print("----Numero");
+              print(huitNumero);
+              if (huitNumero == 0){
+                  setState(() {
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                    loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  });
+              }
+
+              if (huitNumero == 1){
+                print("deuxieme tour pour 8");
+                // setState(() {
+                  loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                  loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                  loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+              }
+              setState(() {
+                
+                if (huitNumero > 2){
+                  huitNumero = 0;
+                  loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                  loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                  loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                  loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                }else{
+                  huitNumero += 1;
+                }
+              });
+            }
+          });
+        }
+
+        if (somme == "6"){
+          print("Six");
+          print(sixNumero);
+          if (sixNumero == 0){
+              setState(() {
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+                winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+              });
+          }
+
+          if (sixNumero == 1){
+            print("deuxieme tour pour 6");
+            setState(() {
+              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+              winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+            });
+          }
+          setState(() {
+            
+            if (sixNumero > 2){
+              sixNumero = 0;
+              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
+              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+              winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            }else{
+              sixNumero += 1;
+            }
+          });
+        }
+
+        if (somme == "7"){
+          print("Sept");
+          print("Numero");
+          if (septNumero == 0){
+              setState(() {
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+              });
+          }
+          setState(() {
+            if (septNumero > 1){
+                septNumero = 0;
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            }else{
+              septNumero += 1;
+            }
+          });
+        }
+        print("Maintenant");
+        if (winningvideoUrlsGazonDebleu.isEmpty){
+          setState(() {
+            print("---------------REMISE en place Gagnants-------------------");
+            winningvideoUrlsGazonDebleu = winningvideoUrlsGazonDebleuCopy;
+            });
+        }
+        if (loosingvideoUrlsGazonDebleu.isEmpty){
+          setState(() {
+            print("---------------REMISE en place Perdants-------------------");
+            loosingvideoUrlsGazonDebleu = loosingvideoUrlsGazonDebleuCopy;
+            });
+        }
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        bool listenedForAudio = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+
+            // if (_controller.value.position <= _controller.value.duration * 0.1666666666666) {
+            // print(listenedForAudio);
+            // if (listenedForAudio == false){
+            //   print("--Lancement du Son");
+            //   // setState(() {
+            //     AudioPlayer player = AudioPlayer();
+            //     player.setAsset('assets/audios/rolling-dice.mp3');
+            //     player.play();
+            //   // });
+            //   listenedForAudio = true;
+            //   tentativeCourrante += 1;
+            //   }
+            // }else{
+            //   listenedForAudio = false;
+            // }
+        });
+      });
+    }
+    if (icolorbg == 1){
+      //  + Gazon marron
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDebleu[Random().nextInt(winningvideoUrlsTapiMarronDebleu.length)]
+      : loosingvideoUrlsTapiMarronDebleu[Random().nextInt(loosingvideoUrlsTapiMarronDebleu.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDebleu[Random().nextInt(winningvideoUrlsTapiMarronDebleu.length)]
+      : loosingvideoUrlsTapiMarronDebleu[Random().nextInt(loosingvideoUrlsTapiMarronDebleu.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    if (icolorbg == 2){
+      //  + Gazon blanc
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDebleu[Random().nextInt(winningvideoUrlsTapiBlancDebleu.length)]
+      : loosingvideoUrlsTapiBlancDebleu[Random().nextInt(loosingvideoUrlsTapiBlancDebleu.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDebleu[Random().nextInt(winningvideoUrlsTapiBlancDebleu.length)]
+      : loosingvideoUrlsTapiBlancDebleu[Random().nextInt(loosingvideoUrlsTapiBlancDebleu.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+  }
+
+
+
+  if (icolor == 2){
+    // De vert
+    if (icolorbg == 0){
+      //  + Gazon vert
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDevert[Random().nextInt(winningvideoUrlsGazonDevert.length)]
+      : loosingvideoUrlsGazonDevert[Random().nextInt(loosingvideoUrlsGazonDevert.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDevert[Random().nextInt(winningvideoUrlsGazonDevert.length)]
+      : loosingvideoUrlsGazonDevert[Random().nextInt(loosingvideoUrlsGazonDevert.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    if (icolorbg == 1){
+      //  + Gazon marron
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDevert[Random().nextInt(winningvideoUrlsTapiMarronDevert.length)]
+      : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDevert[Random().nextInt(winningvideoUrlsTapiMarronDevert.length)]
+      : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    
+    if (icolorbg == 2){
+      //  + Gazon blanc
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDevert[Random().nextInt(winningvideoUrlsTapiBlancDevert.length)]
+      : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDevert[Random().nextInt(winningvideoUrlsTapiBlancDevert.length)]
+      : loosingvideoUrlsTapiBlancDevert[Random().nextInt(loosingvideoUrlsTapiBlancDevert.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+  }
+
+
+  
+  if (icolor == 1){
+    // De rouge
+    if (icolorbg == 0){
+      //  + Gazon vert
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDerouge[Random().nextInt(winningvideoUrlsGazonDerouge.length)]
+      : loosingvideoUrlsGazonDerouge[Random().nextInt(loosingvideoUrlsGazonDerouge.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDerouge[Random().nextInt(winningvideoUrlsGazonDerouge.length)]
+      : loosingvideoUrlsGazonDerouge[Random().nextInt(loosingvideoUrlsGazonDerouge.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    if (icolorbg == 1){
+      //  + Gazon marron
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDerouge[Random().nextInt(winningvideoUrlsTapiMarronDerouge.length)]
+      : loosingvideoUrlsTapiMarronDerouge[Random().nextInt(loosingvideoUrlsTapiMarronDerouge.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDerouge[Random().nextInt(winningvideoUrlsTapiMarronDerouge.length)]
+      : loosingvideoUrlsTapiMarronDerouge[Random().nextInt(loosingvideoUrlsTapiMarronDerouge.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+
+    if (icolorbg == 2){
+      //  + Gazon blanc
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDerouge[Random().nextInt(winningvideoUrlsTapiBlancDerouge.length)]
+      : loosingvideoUrlsTapiBlancDerouge[Random().nextInt(loosingvideoUrlsTapiBlancDerouge.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDerouge[Random().nextInt(winningvideoUrlsTapiBlancDerouge.length)]
+      : loosingvideoUrlsTapiBlancDerouge[Random().nextInt(loosingvideoUrlsTapiBlancDerouge.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+  }
+  if (icolor == 4){
+    // De blanc
+    if (icolorbg == 0){
+      //  + Gazon vert
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
+      : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
+      : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDebleu);
+        print(loosingvideoUrlsGazonDebleu);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    if (icolorbg == 1){
+      //  + Gazon marron
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDeblanc[Random().nextInt(winningvideoUrlsTapiMarronDeblanc.length)]
+      : loosingvideoUrlsTapiMarronDeblanc[Random().nextInt(loosingvideoUrlsTapiMarronDeblanc.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDeblanc[Random().nextInt(winningvideoUrlsTapiMarronDeblanc.length)]
+      : loosingvideoUrlsTapiMarronDeblanc[Random().nextInt(loosingvideoUrlsTapiMarronDeblanc.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsTapiMarronDeblanc);
+        print(loosingvideoUrlsTapiMarronDeblanc);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    if (icolorbg == 2){
+      //  + Gazon blanc
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDeblanc[Random().nextInt(winningvideoUrlsTapiBlancDeblanc.length)]
+      : loosingvideoUrlsTapiBlancDeblanc[Random().nextInt(loosingvideoUrlsTapiBlancDeblanc.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDeblanc[Random().nextInt(winningvideoUrlsTapiBlancDeblanc.length)]
+      : loosingvideoUrlsTapiBlancDeblanc[Random().nextInt(loosingvideoUrlsTapiBlancDeblanc.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsTapiBlancDeblanc);
+        print(loosingvideoUrlsTapiBlancDeblanc);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+  }
+  if (icolor == 3){
+    // De noir
+    if (icolorbg == 0){
+      //  + Gazon vert
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDenoir[Random().nextInt(winningvideoUrlsGazonDenoir.length)]
+      : loosingvideoUrlsGazonDenoir[Random().nextInt(loosingvideoUrlsGazonDenoir.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDenoir[Random().nextInt(winningvideoUrlsGazonDenoir.length)]
+      : loosingvideoUrlsGazonDenoir[Random().nextInt(loosingvideoUrlsGazonDenoir.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDenoir);
+        print(loosingvideoUrlsGazonDenoir);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    if (icolorbg == 1){
+      //  + Gazon marron
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDenoir[Random().nextInt(winningvideoUrlsTapiMarronDenoir.length)]
+      : loosingvideoUrlsTapiMarronDenoir[Random().nextInt(loosingvideoUrlsTapiMarronDenoir.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDenoir[Random().nextInt(winningvideoUrlsTapiMarronDenoir.length)]
+      : loosingvideoUrlsTapiMarronDenoir[Random().nextInt(loosingvideoUrlsTapiMarronDenoir.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsTapiMarronDenoir);
+        print(loosingvideoUrlsTapiMarronDenoir);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+
+    if (icolorbg == 2){
+      //  + Gazon blanc
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDenoir[Random().nextInt(winningvideoUrlsTapiBlancDenoir.length)]
+      : loosingvideoUrlsTapiBlancDenoir[Random().nextInt(loosingvideoUrlsTapiBlancDenoir.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDenoir[Random().nextInt(winningvideoUrlsTapiBlancDenoir.length)]
+      : loosingvideoUrlsTapiBlancDenoir[Random().nextInt(loosingvideoUrlsTapiBlancDenoir.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsTapiBlancDenoir);
+        print(loosingvideoUrlsTapiBlancDenoir);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+  }
+
+
+
+  if (icolor == 5){
+    // De jaune
+    if (icolorbg == 0){
+      //  + Gazon vert
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDejaune[Random().nextInt(winningvideoUrlsGazonDejaune.length)]
+      : loosingvideoUrlsGazonDejaune[Random().nextInt(loosingvideoUrlsGazonDejaune.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsGazonDejaune[Random().nextInt(winningvideoUrlsGazonDejaune.length)]
+      : loosingvideoUrlsGazonDejaune[Random().nextInt(loosingvideoUrlsGazonDejaune.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsGazonDejaune);
+        print(loosingvideoUrlsGazonDejaune);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    if (icolorbg == 1){
+      //  + Gazon marron
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDejaune[Random().nextInt(winningvideoUrlsTapiMarronDejaune.length)]
+      : loosingvideoUrlsTapiMarronDejaune[Random().nextInt(loosingvideoUrlsTapiMarronDejaune.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiMarronDejaune[Random().nextInt(winningvideoUrlsTapiMarronDejaune.length)]
+      : loosingvideoUrlsTapiMarronDejaune[Random().nextInt(loosingvideoUrlsTapiMarronDejaune.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsTapiMarronDejaune);
+        print(loosingvideoUrlsTapiMarronDejaune);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+    if (icolorbg == 2){
+      //  + Gazon marron
+        print([1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDejaune[Random().nextInt(winningvideoUrlsTapiBlancDejaune.length)]
+      : loosingvideoUrlsTapiBlancDejaune[Random().nextInt(loosingvideoUrlsTapiBlancDejaune.length)]);
+
+      _controller = VideoPlayerController.asset(
+      [1, 2, 3, 5, 6, 7, 9, 10, 11, 14, 18, 22, 25, 26, 27, 29, 30, 31, 33, 34, 35, 38, 42, 46, 49, 50, 51, 53, 54, 55, 57, 58, 59, 62, 66, 70].contains(tentativeCourrante)
+      ? winningvideoUrlsTapiBlancDejaune[Random().nextInt(winningvideoUrlsTapiBlancDejaune.length)]
+      : loosingvideoUrlsTapiBlancDejaune[Random().nextInt(loosingvideoUrlsTapiBlancDejaune.length)]
+      )..initialize().then((_) {
+        setState(() {
+          print("+++++++++++Numbre de lance");
+          print(tentativeCourrante);
+        });
+        print(_controller.dataSource);
+        List<String> liste = _controller.dataSource.split("Somme");
+        String somme = liste[1].split("_")[0];
+        print("somme faite");
+        print(somme);
+        if (["2", "3", "11", "12"].contains(somme)){
+          setState(() {
+            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+          });
+        }
+        if (somme == "4"){
+          setState(() {
+            nombreDeFoisEstApparu4 += 1;
+            if (nombreDeFoisEstApparu4 >= 2){
+              print("supression de la somme 4");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "5"){
+          setState(() {
+            nombreDeFoisEstApparu5 += 1;
+            if (nombreDeFoisEstApparu5 >= 2){
+              print("supression de la somme 5");
+              setState(() {
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "9"){
+          setState(() {
+            nombreDeFoisEstApparu9 += 1;
+            if (nombreDeFoisEstApparu9 >= 2){
+              print("supression de la somme 9");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+
+        if (somme == "10"){
+          setState(() {
+            nombreDeFoisEstApparu10 += 1;
+            if (nombreDeFoisEstApparu10 >= 2){
+              print("supression de la somme 10");
+              setState(() {
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
+                winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
+                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
+                winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
+                winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
+                winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
+                winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
+                winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
+                winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
+                winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
+                winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
+                winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
+                winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
+                winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
+                winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
+                winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
+                winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
+                winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
+                winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+                loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
+              });
+            }
+          });
+        }
+        print("Maintenant");
+        print(winningvideoUrlsTapiBlancDejaune);
+        print(loosingvideoUrlsTapiBlancDejaune);
+        _controller.setVolume(0);
+        _controller.play();
+        bool listened = false;
+        _controller.addListener(() {
+            if (_controller.value.position >= _controller.value.duration * 0.33333333) {
+            print(listened);
+            if (listened == false){
+              print("-1--FIN---");
+              listened = true;
+              tentativeCourrante += 1;
+              }
+            }else{
+              listened = false;
+            }
+        });
+      });
+    }
+  }
+ }
   @override
   Widget build(BuildContext context) {
     return _controller.value.isInitialized
         ? GestureDetector(
           behavior: HitTestBehavior.opaque,
-            onTap: () async {
-              List<String> winningvideoUrlsGazonDevertCopy = [
-                'assets/videos/Somme4_gazon_devert.mp4',
-                'assets/videos/Somme6_gazon_devert.mp4',
-                'assets/videos/Somme7_gazon_devert.mp4',
-                'assets/videos/Somme3_gazon_devert.mp4',
-                'assets/videos/Somme5_gazon_devert.mp4'
-              ];
-
-              List<String> loosingvideoUrlsGazonDevertCopy = [
-                'assets/videos/Somme2_gazon_devert.mp4',
-                'assets/videos/Somme8_gazon_devert.mp4',
-                'assets/videos/Somme9_gazon_devert.mp4',
-                'assets/videos/Somme11_gazon_devert.mp4',
-                'assets/videos/Somme10_gazon_devert.mp4',
-                'assets/videos/Somme12_gazon_devert.mp4'
-              ];
-
-              List<String> winningvideoUrlsGazonDebleuCopy = [
-                'assets/videos/Somme4_gazon_debleu.mp4',
-                'assets/videos/Somme6_gazon_debleu.mp4',
-                'assets/videos/Somme7_gazon_debleu.mp4',
-                'assets/videos/Somme3_gazon_debleu.mp4',
-                'assets/videos/Somme5_gazon_debleu.mp4'
-              ];
-
-              List<String> loosingvideoUrlsGazonDebleuCopy = [
-                'assets/videos/Somme2_gazon_debleu.mp4',
-                'assets/videos/Somme8_gazon_debleu.mp4',
-                'assets/videos/Somme9_gazon_debleu.mp4',
-                'assets/videos/Somme11_gazon_debleu.mp4',
-                'assets/videos/Somme10_gazon_debleu.mp4',
-                'assets/videos/Somme12_gazon_debleu.mp4'
-              ];
-
-              List<String> winningvideoUrlsGazonDerougeCopy = [
-                'assets/videos/Somme4_gazon_derouge.mp4',
-                'assets/videos/Somme6_gazon_derouge.mp4',
-                'assets/videos/Somme7_gazon_derouge.mp4',
-                'assets/videos/Somme3_gazon_derouge.mp4',
-                'assets/videos/Somme5_gazon_derouge.mp4'
-              ];
-
-              List<String> loosingvideoUrlsGazonDerougeCopy = [
-                'assets/videos/Somme2_gazon_derouge.mp4',
-                'assets/videos/Somme8_gazon_derouge.mp4',
-                'assets/videos/Somme9_gazon_derouge.mp4',
-                'assets/videos/Somme11_gazon_derouge.mp4',
-                'assets/videos/Somme10_gazon_derouge.mp4',
-                'assets/videos/Somme12_gazon_derouge.mp4'
-              ];
-
-              List<String> winningvideoUrlsGazonDeblancCopy = [
-                'assets/videos/Somme4_gazon_deblanc.mp4',
-                'assets/videos/Somme6_gazon_deblanc.mp4',
-                'assets/videos/Somme7_gazon_deblanc.mp4',
-                'assets/videos/Somme3_gazon_deblanc.mp4',
-                'assets/videos/Somme5_gazon_deblanc.mp4'
-              ];
-
-              List<String> loosingvideoUrlsGazonDeblancCopy = [
-                'assets/videos/Somme2_gazon_deblanc.mp4',
-                'assets/videos/Somme8_gazon_deblanc.mp4',
-                'assets/videos/Somme9_gazon_deblanc.mp4',
-                'assets/videos/Somme11_gazon_deblanc.mp4',
-                'assets/videos/Somme10_gazon_deblanc.mp4',
-                'assets/videos/Somme12_gazon_deblanc.mp4'
-              ];
-
-              List<String> winningvideoUrlsGazonDenoirCopy = [
-                'assets/videos/Somme4_gazon_denoir.mp4',
-                'assets/videos/Somme6_gazon_denoir.mp4',
-                'assets/videos/Somme7_gazon_denoir.mp4',
-                'assets/videos/Somme3_gazon_denoir.mp4',
-                'assets/videos/Somme5_gazon_denoir.mp4'
-              ];
-
-              List<String> loosingvideoUrlsGazonDenoirCopy = [
-                'assets/videos/Somme2_gazon_denoir.mp4',
-                'assets/videos/Somme8_gazon_denoir.mp4',
-                'assets/videos/Somme9_gazon_denoir.mp4',
-                'assets/videos/Somme11_gazon_denoir.mp4',
-                'assets/videos/Somme10_gazon_denoir.mp4',
-                'assets/videos/Somme12_gazon_denoir.mp4'
-              ];
-
-              List<String> winningvideoUrlsGazonDejauneCopy = [
-                'assets/videos/Somme4_gazon_dejaune.mp4',
-                'assets/videos/Somme6_gazon_dejaune.mp4',
-                'assets/videos/Somme7_gazon_dejaune.mp4',
-                'assets/videos/Somme3_gazon_dejaune.mp4',
-                'assets/videos/Somme5_gazon_dejaune.mp4'
-              ];
-
-              List<String> loosingvideoUrlsGazonDejauneCopy = [
-                'assets/videos/Somme2_gazon_dejaune.mp4',
-                'assets/videos/Somme8_gazon_dejaune.mp4',
-                'assets/videos/Somme9_gazon_dejaune.mp4',
-                'assets/videos/Somme11_gazon_dejaune.mp4',
-                'assets/videos/Somme10_gazon_dejaune.mp4',
-                'assets/videos/Somme12_gazon_dejaune.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiMarronDebleuCopy = [
-                'assets/videos/Somme4_tapi_marron_debleu.mp4',
-                'assets/videos/Somme6_tapi_marron_debleu.mp4',
-                'assets/videos/Somme7_tapi_marron_debleu.mp4',
-                'assets/videos/Somme3_tapi_marron_debleu.mp4',
-                'assets/videos/Somme5_tapi_marron_debleu.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiMarronDebleuCopy = [
-                'assets/videos/Somme2_tapi_marron_debleu.mp4',
-                'assets/videos/Somme8_tapi_marron_debleu.mp4',
-                'assets/videos/Somme9_tapi_marron_debleu.mp4',
-                'assets/videos/Somme11_tapi_marron_debleu.mp4',
-                'assets/videos/Somme10_tapi_marron_debleu.mp4',
-                'assets/videos/Somme12_tapi_marron_debleu.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiMarronDevertCopy = [
-                'assets/videos/Somme4_tapi_marron_devert.mp4',
-                'assets/videos/Somme6_tapi_marron_devert.mp4',
-                'assets/videos/Somme7_tapi_marron_devert.mp4',
-                'assets/videos/Somme3_tapi_marron_devert.mp4',
-                'assets/videos/Somme5_tapi_marron_devert.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiMarronDevertCopy = [
-                'assets/videos/Somme2_tapi_marron_devert.mp4',
-                'assets/videos/Somme8_tapi_marron_devert.mp4',
-                'assets/videos/Somme9_tapi_marron_devert.mp4',
-                'assets/videos/Somme11_tapi_marron_devert.mp4',
-                'assets/videos/Somme10_tapi_marron_devert.mp4',
-                'assets/videos/Somme12_tapi_marron_devert.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiMarronDerougeCopy = [
-                'assets/videos/Somme4_tapi_marron_derouge.mp4',
-                'assets/videos/Somme6_tapi_marron_derouge.mp4',
-                'assets/videos/Somme7_tapi_marron_derouge.mp4',
-                'assets/videos/Somme3_tapi_marron_derouge.mp4',
-                'assets/videos/Somme5_tapi_marron_derouge.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiMarronDerougeCopy = [
-                'assets/videos/Somme2_tapi_marron_derouge.mp4',
-                'assets/videos/Somme8_tapi_marron_derouge.mp4',
-                'assets/videos/Somme9_tapi_marron_derouge.mp4',
-                'assets/videos/Somme11_tapi_marron_derouge.mp4',
-                'assets/videos/Somme10_tapi_marron_derouge.mp4',
-                'assets/videos/Somme12_tapi_marron_derouge.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiMarronDeblancCopy = [
-                'assets/videos/Somme4_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme6_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme7_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme3_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme5_tapi_marron_deblanc.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiMarronDeblancCopy = [
-                'assets/videos/Somme2_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme8_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme9_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme11_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme10_tapi_marron_deblanc.mp4',
-                'assets/videos/Somme12_tapi_marron_deblanc.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiMarronDenoirCopy = [
-                'assets/videos/Somme4_tapi_marron_denoir.mp4',
-                'assets/videos/Somme6_tapi_marron_denoir.mp4',
-                'assets/videos/Somme7_tapi_marron_denoir.mp4',
-                'assets/videos/Somme3_tapi_marron_denoir.mp4',
-                'assets/videos/Somme5_tapi_marron_denoir.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiMarronDenoirCopy = [
-                'assets/videos/Somme2_tapi_marron_denoir.mp4',
-                'assets/videos/Somme8_tapi_marron_denoir.mp4',
-                'assets/videos/Somme9_tapi_marron_denoir.mp4',
-                'assets/videos/Somme11_tapi_marron_denoir.mp4',
-                'assets/videos/Somme10_tapi_marron_denoir.mp4',
-                'assets/videos/Somme12_tapi_marron_denoir.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiMarronDejauneCopy = [
-                'assets/videos/Somme4_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme6_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme7_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme3_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme5_tapi_marron_dejaune.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiMarronDejauneCopy = [
-                'assets/videos/Somme2_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme8_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme9_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme11_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme10_tapi_marron_dejaune.mp4',
-                'assets/videos/Somme12_tapi_marron_dejaune.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiBlancDebleuCopy = [
-                'assets/videos/Somme4_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme6_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme7_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme3_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme5_tapi_blanc_debleu.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiBlancDebleuCopy = [
-                'assets/videos/Somme2_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme8_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme9_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme11_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme10_tapi_blanc_debleu.mp4',
-                'assets/videos/Somme12_tapi_blanc_debleu.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiBlancDevertCopy = [
-                'assets/videos/Somme4_tapi_blanc_devert.mp4',
-                'assets/videos/Somme6_tapi_blanc_devert.mp4',
-                'assets/videos/Somme7_tapi_blanc_devert.mp4',
-                'assets/videos/Somme3_tapi_blanc_devert.mp4',
-                'assets/videos/Somme5_tapi_blanc_devert.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiBlancDevertCopy = [
-                'assets/videos/Somme2_tapi_blanc_devert.mp4',
-                'assets/videos/Somme8_tapi_blanc_devert.mp4',
-                'assets/videos/Somme9_tapi_blanc_devert.mp4',
-                'assets/videos/Somme11_tapi_blanc_devert.mp4',
-                'assets/videos/Somme10_tapi_blanc_devert.mp4',
-                'assets/videos/Somme12_tapi_blanc_devert.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiBlancDerougeCopy = [
-                'assets/videos/Somme4_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme6_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme7_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme3_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme5_tapi_blanc_derouge.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiBlancDerougeCopy = [
-                'assets/videos/Somme2_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme8_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme9_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme11_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme10_tapi_blanc_derouge.mp4',
-                'assets/videos/Somme12_tapi_blanc_derouge.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiBlancDeblancCopy = [
-                'assets/videos/Somme4_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme6_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme7_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme3_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme5_tapi_blanc_deblanc.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiBlancDeblancCopy = [
-                'assets/videos/Somme2_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme8_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme9_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme11_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme10_tapi_blanc_deblanc.mp4',
-                'assets/videos/Somme12_tapi_blanc_deblanc.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiBlancDenoirCopy = [
-                'assets/videos/Somme4_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme6_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme7_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme3_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme5_tapi_blanc_denoir.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiBlancDenoirCopy = [
-                'assets/videos/Somme2_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme8_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme9_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme11_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme10_tapi_blanc_denoir.mp4',
-                'assets/videos/Somme12_tapi_blanc_denoir.mp4'
-              ];
-
-              List<String> winningvideoUrlsTapiBlancDejauneCopy = [
-                'assets/videos/Somme4_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme6_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme7_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme3_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme5_tapi_blanc_dejaune.mp4'
-              ];
-
-              List<String> loosingvideoUrlsTapiBlancDejauneCopy = [
-                'assets/videos/Somme2_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme8_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme9_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme11_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme10_tapi_blanc_dejaune.mp4',
-                'assets/videos/Somme12_tapi_blanc_dejaune.mp4'
-              ];
-              setState(() {
-                if (tentativeCourrante > 22){
-                  print("+++++++++Reinitialisation Compteur");
-                  tentativeCourrante = 1;
-                }
-                if (tentativeCourrante > 11){
-                  print("+++++++++Reinitialisation Liste");
-                  nombreDeFoisEstApparu4 = 0;
-                  nombreDeFoisEstApparu5 = 0;
-                  nombreDeFoisEstApparu9 = 0;
-                  nombreDeFoisEstApparu10 = 0;
-                  winningvideoUrlsGazonDevert = winningvideoUrlsGazonDevertCopy;
-                  loosingvideoUrlsGazonDevert = loosingvideoUrlsGazonDevertCopy;
-                  // winningvideoUrlsGazonDebleu = winningvideoUrlsGazonDebleuCopy;
-                  // loosingvideoUrlsGazonDebleu = loosingvideoUrlsGazonDebleuCopy;
-                  String jumelesGagn = "";
-                  for (String video in winningvideoUrlsGazonDebleu){
-                    jumelesGagn += video;
-                  }
-                  print("***jumelesGagn---");
-                  print(jumelesGagn);
-                  if (!jumelesGagn.contains("Somme4")){
-                    if (quatreNumero == 0){
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"4"+"_gazon_debleu.mp4");
-                    }
-                    else{
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"4"+"_gazon_debleu_1.mp4");
-                    }
-                  }
-                  if (!jumelesGagn.contains("Somme6")){
-                    if (sixNumero == 0){
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu.mp4");
-                    }
-                    if (sixNumero == 1){
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu_1.mp4");
-                    }
-                    if (sixNumero > 2){
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"6"+"_gazon_debleu_2.mp4");
-                    }
-                  }
-                  if (!jumelesGagn.contains("Somme7")){
-                    if (septNumero == 0){
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"7"+"_gazon_debleu.mp4");
-                    }
-                    else{
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"7"+"_gazon_debleu_1.mp4");
-                    }
-                  }
-                  if (!jumelesGagn.contains("Somme3")){
-                    winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"3"+"_gazon_debleu.mp4");
-                  }
-                  if (!jumelesGagn.contains("Somme5")){
-                    if (cinqNumero == 0){
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"5"+"_gazon_debleu.mp4");
-                    }
-                    else{
-                      winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"5"+"_gazon_debleu_1.mp4");
-                    }
-                  }
-
-
-                  
-                  String jumeles = "";
-                  for (String video in loosingvideoUrlsGazonDebleu){
-                    jumeles += video;
-                  }
-                  print("***Jumles");
-                  print(jumeles);
-                  if (!jumeles.contains("Somme2")){
-                    print("Tout les sommes 2 absents");
-                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"2"+"_gazon_debleu.mp4");
-                  }
-                  if (!jumeles.contains("Somme8")){
-                    print("Tout les sommes 8 absents");
-                    if (huitNumero == 0){
-                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu.mp4");
-                    }
-                    if (huitNumero == 1){
-                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu_1.mp4");
-                    }
-                    if (huitNumero > 2){
-                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"8"+"_gazon_debleu_2.mp4");
-                    }
-                  }
-                  if (!jumeles.contains("Somme9")){
-                    print("Tout les sommes 9 absents");
-                    if (neufNumero == 0){
-                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"9"+"_gazon_debleu.mp4");
-                    }
-                    if (neufNumero > 1){
-                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"9"+"_gazon_debleu_1.mp4");
-                    }
-                  }
-                  if (!jumeles.contains("Somme11")){
-                    print("Tout les sommes 11 absents");
-                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"11"+"_gazon_debleu.mp4");
-                  }
-                  if (!jumeles.contains("Somme10")){
-                    print("Tout les sommes 10 absents");
-                    if (dixNumero == 0){
-                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"10"+"_gazon_debleu.mp4");
-                    }
-                    if (dixNumero > 1){
-                      loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"10"+"_gazon_debleu_1.mp4");
-                    }
-                  }
-                  if (!jumeles.contains("Somme12")){
-                    print("Tout les sommes 12 absents");
-                    loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+"12"+"_gazon_debleu.mp4");
-                  }
-                  winningvideoUrlsGazonDerouge = winningvideoUrlsGazonDerougeCopy;
-                  loosingvideoUrlsGazonDerouge = loosingvideoUrlsGazonDerougeCopy;
-                  winningvideoUrlsGazonDeblanc = winningvideoUrlsGazonDeblancCopy;
-                  loosingvideoUrlsGazonDeblanc = loosingvideoUrlsGazonDeblancCopy;
-                  winningvideoUrlsGazonDenoir = winningvideoUrlsGazonDenoirCopy;
-                  loosingvideoUrlsGazonDenoir = loosingvideoUrlsGazonDenoirCopy;
-                  winningvideoUrlsGazonDejaune = winningvideoUrlsGazonDejauneCopy;
-                  loosingvideoUrlsGazonDejaune = loosingvideoUrlsGazonDejauneCopy;
-                  winningvideoUrlsTapiMarronDebleu = winningvideoUrlsTapiMarronDebleuCopy;
-                  loosingvideoUrlsTapiMarronDebleu = loosingvideoUrlsTapiMarronDebleuCopy;
-                  winningvideoUrlsTapiMarronDevert = winningvideoUrlsTapiMarronDevertCopy;
-                  loosingvideoUrlsTapiMarronDevert = loosingvideoUrlsTapiMarronDevertCopy;
-                  winningvideoUrlsTapiMarronDerouge = winningvideoUrlsTapiMarronDerougeCopy;
-                  loosingvideoUrlsTapiMarronDerouge = loosingvideoUrlsTapiMarronDerougeCopy;
-                  winningvideoUrlsTapiMarronDeblanc = winningvideoUrlsTapiMarronDeblancCopy;
-                  loosingvideoUrlsTapiMarronDeblanc = loosingvideoUrlsTapiMarronDeblancCopy;
-                  winningvideoUrlsTapiMarronDenoir = winningvideoUrlsTapiMarronDenoirCopy;
-                  loosingvideoUrlsTapiMarronDenoir = loosingvideoUrlsTapiMarronDenoirCopy;
-                  winningvideoUrlsTapiMarronDejaune = winningvideoUrlsTapiMarronDejauneCopy;
-                  loosingvideoUrlsTapiMarronDejaune = loosingvideoUrlsTapiMarronDejauneCopy;
-                  winningvideoUrlsTapiBlancDebleu = winningvideoUrlsTapiBlancDebleuCopy;
-                  loosingvideoUrlsTapiBlancDebleu = loosingvideoUrlsTapiBlancDebleuCopy;
-                  winningvideoUrlsTapiBlancDevert = winningvideoUrlsTapiBlancDevertCopy;
-                  loosingvideoUrlsTapiBlancDevert = loosingvideoUrlsTapiBlancDevertCopy;
-                  winningvideoUrlsTapiBlancDerouge = winningvideoUrlsTapiBlancDerougeCopy;
-                  loosingvideoUrlsTapiBlancDerouge = loosingvideoUrlsTapiBlancDerougeCopy;
-                  winningvideoUrlsTapiBlancDeblanc = winningvideoUrlsTapiBlancDeblancCopy;
-                  loosingvideoUrlsTapiBlancDeblanc = loosingvideoUrlsTapiBlancDeblancCopy;
-                  winningvideoUrlsTapiBlancDenoir = winningvideoUrlsTapiBlancDenoirCopy;
-                  loosingvideoUrlsTapiBlancDenoir = loosingvideoUrlsTapiBlancDenoirCopy;
-                  winningvideoUrlsTapiBlancDejaune = winningvideoUrlsTapiBlancDejauneCopy;
-                  loosingvideoUrlsTapiBlancDejaune = loosingvideoUrlsTapiBlancDejauneCopy;
-                }
-              });
-              if([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)){
-                print('OKOKOKOKO');
-              }
-              _controller.dispose();
-              print("couleur du de");
-              print(icolor);
-              print("couleur background");
-              print(icolorbg);
-              if (icolor == 0){
-                // De bleu
-                if (icolorbg == 0){
-                  //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
-                  : loosingvideoUrlsGazonDebleu[0]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDebleu[Random().nextInt(winningvideoUrlsGazonDebleu.length)]
-                  : loosingvideoUrlsGazonDebleu[0]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }else{
-                          print("Quatre");
-                          print(quatreNumero);
-                          if (quatreNumero == 0){
-                              setState(() {
-                                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                                winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              });
-                          }
-                          setState(() {
-                          if (quatreNumero > 1){
-                              quatreNumero = 0;
-                              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                              winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            }else{
-                              quatreNumero += 1;
-                            }
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }else{
-                          print("Cinq");
-                          print(cinqNumero);
-                          if (cinqNumero == 0){
-                              setState(() {
-                                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                                winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                                winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              });
-                          }
-                          setState(() {
-                          if (cinqNumero > 1){
-                              cinqNumero = 0;
-                              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                              winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            }else{
-                              cinqNumero += 1;
-                            }
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                        else{
-                          print(neufNumero);
-                          if (neufNumero == 0){
-                              setState(() {
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                                loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              });
-                          }
-                          setState(() {
-                            if (neufNumero > 1){
-                                neufNumero = 0;
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                                loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                              }
-                            else{
-                              neufNumero += 1;
-                            }
-                            });
-                          }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }else{
-                          print(dixNumero);
-                          if (dixNumero == 0){
-                              setState(() {
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                                loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              });
-                          }
-                          setState(() {
-                            
-                          if (dixNumero > 1){
-                                dixNumero = 0;
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                                loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                              }else{
-                                dixNumero += 1;
-                              }
-                            });
-                          }
-                      });
-                    }
-
-                    if (somme == "8"){
-                      setState((){
-                        nombreDeFoisEstApparu8 += 1;
-                        if (nombreDeFoisEstApparu8 >= 3){
-                          print("supression de la somme 8");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }else{
-                          print("----Numero");
-                          print(huitNumero);
-                          if (huitNumero == 0){
-                              setState(() {
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                                loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                                  loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              });
-                          }
-
-                          if (huitNumero == 1){
-                            print("deuxieme tour pour 8");
-                            // setState(() {
-                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                              loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                          }
-                          setState(() {
-                            
-                            if (huitNumero > 2){
-                              huitNumero = 0;
-                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                              loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                              loosingvideoUrlsGazonDebleu.insert(loosingvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            }else{
-                              huitNumero += 1;
-                            }
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "6"){
-                      print("Six");
-                      print(sixNumero);
-                      if (sixNumero == 0){
-                          setState(() {
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                            winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                          });
-                      }
-
-                      if (sixNumero == 1){
-                        print("deuxieme tour pour 6");
-                        setState(() {
-                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                        });
-                      }
-                      setState(() {
-                        
-                        if (sixNumero > 2){
-                          sixNumero = 0;
-                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_2.mp4");
-                          winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                          winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        }else{
-                          sixNumero += 1;
-                        }
-                      });
-                    }
-
-                    if (somme == "7"){
-                      print("Sept");
-                      print("Numero");
-                      if (septNumero == 0){
-                          setState(() {
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                          });
-                      }
-                      setState(() {
-                        if (septNumero > 1){
-                            septNumero = 0;
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDebleu.insert(winningvideoUrlsGazonDebleu.length, "assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        }else{
-                          septNumero += 1;
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    if (winningvideoUrlsGazonDebleu.isEmpty){
-                      setState(() {
-                        print("---------------REMISE en place Gagnants-------------------");
-                        winningvideoUrlsGazonDebleu = winningvideoUrlsGazonDebleuCopy;
-                        });
-                    }
-                    if (loosingvideoUrlsGazonDebleu.isEmpty){
-                      setState(() {
-                        print("---------------REMISE en place Perdants-------------------");
-                        loosingvideoUrlsGazonDebleu = loosingvideoUrlsGazonDebleuCopy;
-                        });
-                    }
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    bool listenedForAudio = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-
-                        // if (_controller.value.position <= _controller.value.duration * 0.1666666666666) {
-                        // print(listenedForAudio);
-                        // if (listenedForAudio == false){
-                        //   print("--Lancement du Son");
-                        //   // setState(() {
-                        //     AudioPlayer player = AudioPlayer();
-                        //     player.setAsset('assets/audios/rolling-dice.mp3');
-                        //     player.play();
-                        //   // });
-                        //   listenedForAudio = true;
-                        //   tentativeCourrante += 1;
-                        //   }
-                        // }else{
-                        //   listenedForAudio = false;
-                        // }
-                    });
-                  });
-                }
-                if (icolorbg == 1){
-                  //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDebleu[Random().nextInt(winningvideoUrlsTapiMarronDebleu.length)]
-                  : loosingvideoUrlsTapiMarronDebleu[Random().nextInt(loosingvideoUrlsTapiMarronDebleu.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDebleu[Random().nextInt(winningvideoUrlsTapiMarronDebleu.length)]
-                  : loosingvideoUrlsTapiMarronDebleu[Random().nextInt(loosingvideoUrlsTapiMarronDebleu.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                if (icolorbg == 2){
-                  //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDebleu[Random().nextInt(winningvideoUrlsTapiBlancDebleu.length)]
-                  : loosingvideoUrlsTapiBlancDebleu[Random().nextInt(loosingvideoUrlsTapiBlancDebleu.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDebleu[Random().nextInt(winningvideoUrlsTapiBlancDebleu.length)]
-                  : loosingvideoUrlsTapiBlancDebleu[Random().nextInt(loosingvideoUrlsTapiBlancDebleu.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-              }
-
-
-
-              if (icolor == 2){
-                // De vert
-                if (icolorbg == 0){
-                  //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDevert[Random().nextInt(winningvideoUrlsGazonDevert.length)]
-                  : loosingvideoUrlsGazonDevert[Random().nextInt(loosingvideoUrlsGazonDevert.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDevert[Random().nextInt(winningvideoUrlsGazonDevert.length)]
-                  : loosingvideoUrlsGazonDevert[Random().nextInt(loosingvideoUrlsGazonDevert.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                if (icolorbg == 1){
-                  //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDevert[Random().nextInt(winningvideoUrlsTapiMarronDevert.length)]
-                  : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDevert[Random().nextInt(winningvideoUrlsTapiMarronDevert.length)]
-                  : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                
-                if (icolorbg == 2){
-                  //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDevert[Random().nextInt(winningvideoUrlsTapiBlancDevert.length)]
-                  : loosingvideoUrlsTapiMarronDevert[Random().nextInt(loosingvideoUrlsTapiMarronDevert.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDevert[Random().nextInt(winningvideoUrlsTapiBlancDevert.length)]
-                  : loosingvideoUrlsTapiBlancDevert[Random().nextInt(loosingvideoUrlsTapiBlancDevert.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-              }
-
-
-              
-              if (icolor == 1){
-                // De rouge
-                if (icolorbg == 0){
-                  //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDerouge[Random().nextInt(winningvideoUrlsGazonDerouge.length)]
-                  : loosingvideoUrlsGazonDerouge[Random().nextInt(loosingvideoUrlsGazonDerouge.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDerouge[Random().nextInt(winningvideoUrlsGazonDerouge.length)]
-                  : loosingvideoUrlsGazonDerouge[Random().nextInt(loosingvideoUrlsGazonDerouge.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                if (icolorbg == 1){
-                  //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDerouge[Random().nextInt(winningvideoUrlsTapiMarronDerouge.length)]
-                  : loosingvideoUrlsTapiMarronDerouge[Random().nextInt(loosingvideoUrlsTapiMarronDerouge.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDerouge[Random().nextInt(winningvideoUrlsTapiMarronDerouge.length)]
-                  : loosingvideoUrlsTapiMarronDerouge[Random().nextInt(loosingvideoUrlsTapiMarronDerouge.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-
-                if (icolorbg == 2){
-                  //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDerouge[Random().nextInt(winningvideoUrlsTapiBlancDerouge.length)]
-                  : loosingvideoUrlsTapiBlancDerouge[Random().nextInt(loosingvideoUrlsTapiBlancDerouge.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDerouge[Random().nextInt(winningvideoUrlsTapiBlancDerouge.length)]
-                  : loosingvideoUrlsTapiBlancDerouge[Random().nextInt(loosingvideoUrlsTapiBlancDerouge.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-              }
-              if (icolor == 4){
-                // De blanc
-                if (icolorbg == 0){
-                  //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
-                  : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDeblanc[Random().nextInt(winningvideoUrlsGazonDeblanc.length)]
-                  : loosingvideoUrlsGazonDeblanc[Random().nextInt(loosingvideoUrlsGazonDeblanc.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDebleu);
-                    print(loosingvideoUrlsGazonDebleu);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                if (icolorbg == 1){
-                  //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDeblanc[Random().nextInt(winningvideoUrlsTapiMarronDeblanc.length)]
-                  : loosingvideoUrlsTapiMarronDeblanc[Random().nextInt(loosingvideoUrlsTapiMarronDeblanc.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDeblanc[Random().nextInt(winningvideoUrlsTapiMarronDeblanc.length)]
-                  : loosingvideoUrlsTapiMarronDeblanc[Random().nextInt(loosingvideoUrlsTapiMarronDeblanc.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsTapiMarronDeblanc);
-                    print(loosingvideoUrlsTapiMarronDeblanc);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                if (icolorbg == 2){
-                  //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDeblanc[Random().nextInt(winningvideoUrlsTapiBlancDeblanc.length)]
-                  : loosingvideoUrlsTapiBlancDeblanc[Random().nextInt(loosingvideoUrlsTapiBlancDeblanc.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDeblanc[Random().nextInt(winningvideoUrlsTapiBlancDeblanc.length)]
-                  : loosingvideoUrlsTapiBlancDeblanc[Random().nextInt(loosingvideoUrlsTapiBlancDeblanc.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsTapiBlancDeblanc);
-                    print(loosingvideoUrlsTapiBlancDeblanc);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-              }
-              if (icolor == 3){
-                // De noir
-                if (icolorbg == 0){
-                  //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDenoir[Random().nextInt(winningvideoUrlsGazonDenoir.length)]
-                  : loosingvideoUrlsGazonDenoir[Random().nextInt(loosingvideoUrlsGazonDenoir.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDenoir[Random().nextInt(winningvideoUrlsGazonDenoir.length)]
-                  : loosingvideoUrlsGazonDenoir[Random().nextInt(loosingvideoUrlsGazonDenoir.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDenoir);
-                    print(loosingvideoUrlsGazonDenoir);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                if (icolorbg == 1){
-                  //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDenoir[Random().nextInt(winningvideoUrlsTapiMarronDenoir.length)]
-                  : loosingvideoUrlsTapiMarronDenoir[Random().nextInt(loosingvideoUrlsTapiMarronDenoir.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDenoir[Random().nextInt(winningvideoUrlsTapiMarronDenoir.length)]
-                  : loosingvideoUrlsTapiMarronDenoir[Random().nextInt(loosingvideoUrlsTapiMarronDenoir.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsTapiMarronDenoir);
-                    print(loosingvideoUrlsTapiMarronDenoir);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-
-                if (icolorbg == 2){
-                  //  + Gazon blanc
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDenoir[Random().nextInt(winningvideoUrlsTapiBlancDenoir.length)]
-                  : loosingvideoUrlsTapiBlancDenoir[Random().nextInt(loosingvideoUrlsTapiBlancDenoir.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDenoir[Random().nextInt(winningvideoUrlsTapiBlancDenoir.length)]
-                  : loosingvideoUrlsTapiBlancDenoir[Random().nextInt(loosingvideoUrlsTapiBlancDenoir.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsTapiBlancDenoir);
-                    print(loosingvideoUrlsTapiBlancDenoir);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-              }
-
-
-
-              if (icolor == 5){
-                // De jaune
-                if (icolorbg == 0){
-                  //  + Gazon vert
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDejaune[Random().nextInt(winningvideoUrlsGazonDejaune.length)]
-                  : loosingvideoUrlsGazonDejaune[Random().nextInt(loosingvideoUrlsGazonDejaune.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsGazonDejaune[Random().nextInt(winningvideoUrlsGazonDejaune.length)]
-                  : loosingvideoUrlsGazonDejaune[Random().nextInt(loosingvideoUrlsGazonDejaune.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsGazonDejaune);
-                    print(loosingvideoUrlsGazonDejaune);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                if (icolorbg == 1){
-                  //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDejaune[Random().nextInt(winningvideoUrlsTapiMarronDejaune.length)]
-                  : loosingvideoUrlsTapiMarronDejaune[Random().nextInt(loosingvideoUrlsTapiMarronDejaune.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiMarronDejaune[Random().nextInt(winningvideoUrlsTapiMarronDejaune.length)]
-                  : loosingvideoUrlsTapiMarronDejaune[Random().nextInt(loosingvideoUrlsTapiMarronDejaune.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsTapiMarronDejaune);
-                    print(loosingvideoUrlsTapiMarronDejaune);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-                if (icolorbg == 2){
-                  //  + Gazon marron
-                    print([1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDejaune[Random().nextInt(winningvideoUrlsTapiBlancDejaune.length)]
-                  : loosingvideoUrlsTapiBlancDejaune[Random().nextInt(loosingvideoUrlsTapiBlancDejaune.length)]);
-
-                  _controller = VideoPlayerController.asset(
-                  [1, 2, 4, 5, 7, 8, 12, 15, 18, 19, 20].contains(tentativeCourrante)
-                  ? winningvideoUrlsTapiBlancDejaune[Random().nextInt(winningvideoUrlsTapiBlancDejaune.length)]
-                  : loosingvideoUrlsTapiBlancDejaune[Random().nextInt(loosingvideoUrlsTapiBlancDejaune.length)]
-                  )..initialize().then((_) {
-                    setState(() {
-                      print("+++++++++++Numbre de lance");
-                      print(tentativeCourrante);
-                    });
-                    print(_controller.dataSource);
-                    List<String> liste = _controller.dataSource.split("Somme");
-                    String somme = liste[1].split("_")[0];
-                    print("somme faite");
-                    print(somme);
-                    if (["2", "3", "11", "12"].contains(somme)){
-                      setState(() {
-                        winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                        winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                        winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                        winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                        winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                        winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                        winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                        winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                        winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                        winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                        winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                        winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                        winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                        winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                        winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                        winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                        winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                        winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                        loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                      });
-                    }
-                    if (somme == "4"){
-                      setState(() {
-                        nombreDeFoisEstApparu4 += 1;
-                        if (nombreDeFoisEstApparu4 >= 2){
-                          print("supression de la somme 4");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "5"){
-                      setState(() {
-                        nombreDeFoisEstApparu5 += 1;
-                        if (nombreDeFoisEstApparu5 >= 2){
-                          print("supression de la somme 5");
-                          setState(() {
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "9"){
-                      setState(() {
-                        nombreDeFoisEstApparu9 += 1;
-                        if (nombreDeFoisEstApparu9 >= 2){
-                          print("supression de la somme 9");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-
-                    if (somme == "10"){
-                      setState(() {
-                        nombreDeFoisEstApparu10 += 1;
-                        if (nombreDeFoisEstApparu10 >= 2){
-                          print("supression de la somme 10");
-                          setState(() {
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu_1.mp4");
-                            winningvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            loosingvideoUrlsGazonDevert.remove("assets/videos/Somme"+somme+"_gazon_devert.mp4");
-                            winningvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            loosingvideoUrlsGazonDebleu.remove("assets/videos/Somme"+somme+"_gazon_debleu.mp4");
-                            winningvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            loosingvideoUrlsGazonDerouge.remove("assets/videos/Somme"+somme+"_gazon_derouge.mp4");
-                            winningvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            loosingvideoUrlsGazonDeblanc.remove("assets/videos/Somme"+somme+"_gazon_deblanc.mp4");
-                            winningvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            loosingvideoUrlsGazonDenoir.remove("assets/videos/Somme"+somme+"_gazon_denoir.mp4");
-                            winningvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            loosingvideoUrlsGazonDejaune.remove("assets/videos/Somme"+somme+"_gazon_dejaune.mp4");
-                            winningvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            loosingvideoUrlsTapiMarronDebleu.remove("assets/videos/Somme"+somme+"_tapi_marron_debleu.mp4");
-                            winningvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            loosingvideoUrlsTapiMarronDevert.remove("assets/videos/Somme"+somme+"_tapi_marron_devert.mp4");
-                            winningvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            loosingvideoUrlsTapiMarronDerouge.remove("assets/videos/Somme"+somme+"_tapi_marron_derouge.mp4");
-                            winningvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            loosingvideoUrlsTapiMarronDeblanc.remove("assets/videos/Somme"+somme+"_tapi_marron_deblanc.mp4");
-                            winningvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            loosingvideoUrlsTapiMarronDenoir.remove("assets/videos/Somme"+somme+"_tapi_marron_denoir.mp4");
-                            winningvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            loosingvideoUrlsTapiMarronDejaune.remove("assets/videos/Somme"+somme+"_tapi_marron_dejaune.mp4");
-                            winningvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            loosingvideoUrlsTapiBlancDebleu.remove("assets/videos/Somme"+somme+"_tapi_blanc_debleu.mp4");
-                            winningvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            loosingvideoUrlsTapiBlancDevert.remove("assets/videos/Somme"+somme+"_tapi_blanc_devert.mp4");
-                            winningvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            loosingvideoUrlsTapiBlancDerouge.remove("assets/videos/Somme"+somme+"_tapi_blanc_derouge.mp4");
-                            winningvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            loosingvideoUrlsTapiBlancDeblanc.remove("assets/videos/Somme"+somme+"_tapi_blanc_deblanc.mp4");
-                            winningvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            loosingvideoUrlsTapiBlancDenoir.remove("assets/videos/Somme"+somme+"_tapi_blanc_denoir.mp4");
-                            winningvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                            loosingvideoUrlsTapiBlancDejaune.remove("assets/videos/Somme"+somme+"_tapi_blanc_dejaune.mp4");
-                          });
-                        }
-                      });
-                    }
-                    print("Maintenant");
-                    print(winningvideoUrlsTapiBlancDejaune);
-                    print(loosingvideoUrlsTapiBlancDejaune);
-                    _controller.setVolume(0);
-                    _controller.play();
-                    bool listened = false;
-                    _controller.addListener(() {
-                        if (_controller.value.position >= _controller.value.duration * 0.33333333) {
-                        print(listened);
-                        if (listened == false){
-                          print("-1--FIN---");
-                          listened = true;
-                          tentativeCourrante += 1;
-                          }
-                        }else{
-                          listened = false;
-                        }
-                    });
-                  });
-                }
-              }
+            onVerticalDragStart: (details) {
+              handleEvent();
             },
             child: Stack(
               children: [

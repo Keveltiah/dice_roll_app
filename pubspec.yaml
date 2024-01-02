@@ -38,6 +38,8 @@ dependencies:
   audioplayers: ^5.2.1
   just_audio: ^0.9.36
   flutter_ffmpeg: ^0.4.2
+  shake: ^2.2.0
+  sensors: ^2.0.3
 
 flutter_icons:
   android: true
