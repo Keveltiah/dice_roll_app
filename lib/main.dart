@@ -397,7 +397,7 @@ class _RandomVideoPlayerState extends State<RandomVideoPlayer> {
     //   shakeThresholdGravity: 2.4,
     //   // shakeSlopTimeMS: 1
     // );
-    final  customDate = "2024-01-10 00:00:00";
+    final  customDate = "2024-01-20 00:00:00";
     final parsed = DateTime.parse(customDate);
     final maDate = DateTime.now();
     print("Result");
